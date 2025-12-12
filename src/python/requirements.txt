@@ -1,5 +1,5 @@
 # Azure OpenAI SDK
-azure-openai>=1.0.0
+openai>=1.0.0
 
 # Environment variable management
 python-dotenv>=1.0.0
@@ -10,3 +10,14 @@ requests>=2.31.0
 # Logging and utilities
 azure-identity>=1.15.0
 
+# For embeddings calculations
+numpy>=1.24.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Code quality
+flake8>=6.1.0
+black>=23.0.0
+isort>=5.12.0

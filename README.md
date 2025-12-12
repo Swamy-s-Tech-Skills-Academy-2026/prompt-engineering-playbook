@@ -89,7 +89,7 @@ prompt-engineering-playbook/
 │   ├── 03-templates.md
 │   ├── 04-governance.md
 │   └── 05-evaluation-and-testing.md
-├── examples/
+├── src/
 │   ├── python/
 │   │   ├── README.md
 │   │   ├── requirements.txt

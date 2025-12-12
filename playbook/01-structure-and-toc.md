@@ -45,11 +45,11 @@ The Prompt Engineering Playbook is organized into logical sections that build up
 
 ## Code Examples
 
-Code integration examples are provided in the `examples/` directory:
+Code integration examples are provided in the `src/` directory:
 
-- **Python**: `examples/python/` - Azure OpenAI SDK examples
-- **C#**: `examples/csharp/` - .NET SDK examples
-- **Postman**: `examples/postman/` - REST API examples
+- **Python**: `src/python/` - Azure OpenAI SDK examples
+- **C#**: `src/csharp/` - .NET SDK examples
+- **Postman**: `src/postman/` - REST API examples
 
 ## Documentation
 
