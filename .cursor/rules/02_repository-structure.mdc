@@ -1,0 +1,177 @@
+# Repository Structure & Context
+
+**Version**: 1.4  
+**Last Updated**: November 24, 2025
+
+---
+
+## 🧭 Repository Context
+
+**ArchitectJourney** is a comprehensive learning and reference repository for aspiring software architects. It provides:
+
+- Structured learning roadmap from foundational programming to architectural mastery
+- Reference materials for design patterns, principles, and best practices
+- Practical project examples and implementation guides
+- Leadership and strategic frameworks for technical decision-making
+
+**Target Audience**: Developers → Software Architects → Lead Architects → Technology Directors
+
+**Learning Framework**: 9-stage unified progression combining core architecture fundamentals with leadership development
+
+### 🚨 CRITICAL: Repository Purpose & Code Separation
+
+**This repository (`ArchitectJourney`) is EXCLUSIVELY for educational content:**
+
+- ✅ **Educational Content Only**: Markdown documentation, learning materials, concepts, and illustrative code examples
+- ✅ **Minimal Code Examples**: Code snippets in educational content should be minimal, illustrative, and focused on teaching concepts
+- ❌ **NO Full Implementations**: Complete, runnable code projects are NOT stored in this repository
+- ❌ **NO Code Repositories**: This repository does not contain language-specific code implementations
+
+**Code Implementations Location:**
+
+All full code implementations, projects, and runnable examples are stored in **separate GitHub repositories** within the same organization (`SwamysArchitectJourney-2026`):
+
+- `Python` - Python implementations
+- `CSharp` - C# and .NET projects
+- `JavaScript` - JavaScript/TypeScript projects
+- `Java` - Java and Spring Boot
+- `Go` - Go projects
+- `Cloud` - Infrastructure as Code
+- `AI-ML` - AI/ML implementations
+
+**Code Examples in Educational Content:**
+
+When including code examples in educational content:
+
+- ✅ Use minimal, illustrative snippets to demonstrate concepts
+- ✅ Focus on teaching, not complete implementations
+- ✅ Reference full implementations in separate code repositories
+- ❌ Do not include complete, production-ready code
+- ❌ Do not create runnable projects in this repository
+
+---
+
+## 📁 Repository Structure
+
+### Current Structure (As of November 24, 2025)
+
+```text
+ArchitectJourney/
+├── .copilot/                              # Copilot configuration
+│   └── settings.json
+├── .cursor/                               # Cursor AI configuration
+│   └── rules/                             # Project rules (this directory)
+│       ├── 01_educational-content-rules.mdc
+│       ├── 02_repository-structure.mdc
+│       ├── 03_quality-assurance.mdc
+│       ├── 04_markdown-standards.mdc
+│       ├── 05_primary-directives.mdc
+│       ├── 06_cross-domain-integration.mdc
+│       └── README.md
+├── .github/                               # GitHub configuration
+│   ├── copilot-instructions.md            # GitHub Copilot instructions
+│   └── prompts/                           # Reusable prompt templates
+│       ├── smart-prompt-framework-guide.md
+│       └── task-prompt.md
+├── docs/                                  # Documentation hub
+│   ├── 01_GitHub-Organization-Strategy.md
+│   ├── 02_Workspace-Review-2025-11-23.md
+│   ├── review-reports/                     # All review reports (migration, content review, etc.)
+│   │   └── [DDMonYYYY.md]                 # Example: 24Nov2025.md (date-based naming)
+│   └── images/                            # Architecture diagrams and assets
+│       └── .gitkeep
+├── LICENSE                                 # MIT License
+├── README.md                               # Main repository documentation
+└── .gitignore                             # Git ignore rules
+```
+
+### Current Structure (As of November 24, 2025)
+
+```text
+ArchitectJourney/
+├── .copilot/                              # Copilot configuration
+├── .cursor/                               # Cursor AI configuration
+├── .github/                               # GitHub configuration
+├── docs/                                  # Documentation hub
+├── src/                                   # Source content (organized)
+│   ├── 01_Reference/                     # Static knowledge base (compliant content)
+│   │   ├── 01_Development/               # Software development fundamentals
+│   │   ├── 02_AI-and-ML/                 # AI/ML knowledge base
+│   │   └── 05_DevOps/                    # DevOps practices and tools
+│   ├── 02_Learning/                       # Progressive learning paths (coming soon)
+│   └── 03_Interview-Prep/                # Interview preparation materials
+│       ├── Common/                       # Shared interview content
+│       ├── TPM/                          # Technical Project Manager prep
+│       ├── Architect/                    # Software Architect prep
+│       ├── Solution-Architect/           # Solution Architect prep
+│       └── Engineering-Manager/          # Engineering Manager prep
+├── source-materials/                      # Staging area (at repository root, git-ignored, non-compliant)
+│   └── [source content before transformation]
+└── tools/                                 # Automation and utilities
+    └── psscripts/                         # PowerShell scripts
+        ├── Get-FileStats.ps1
+        ├── Get-MarkdownSummary.ps1
+        ├── Get-RepoStats.ps1
+        ├── Compare-DocFiles.ps1
+        ├── Find-DuplicateContent.ps1
+        ├── Quick-HealthCheck.ps1
+        └── README.md
+```
+
+---
+
+## 📁 Source Materials Staging Area
+
+**Location**: `source-materials/` (at repository root, git-ignored)
+
+**Purpose**: **Staging folder for migration** - Permanent staging area where source content is placed before review and transformation into ArchitectJourney educational content.
+
+**Critical Workflow**:
+
+1. **Place materials**: User places source materials (transcripts, notes, documents) in `source-materials/` folder (at repository root)
+2. **Review and migrate**: AI assistant reviews ALL files, identifies unique content, and migrates/transforms following Educational Content Rules
+3. **Verify migration**: Confirm all unique content has been migrated to `src/01_Reference/`, `src/02_Learning/`, or `src/03_Interview-Prep/`
+4. **Create verification report**: Generate migration verification report in `docs/review-reports/` with date-based naming (format: `DDMonYYYY.md`, e.g., `24Nov2025.md`)
+5. **Keep source files**: After successful migration, keep source files in `source-materials/` folder - user will delete manually
+
+**Important**:
+
+- Files in `source-materials/` are **NOT required to be compliant** - they are raw source materials
+- The `source-materials/` folder itself is **permanent** - it's a staging area for ongoing migrations
+- After migration, **keep source files** in `source-materials/` folder - user will delete manually
+
+### Learning Paths Structure
+
+**Important**: `Learning/` folders are created **as needed** when learning content is ready to be added. Empty folders are acceptable and expected.
+
+**Policy**:
+
+- ✅ Create `Learning/` folder structure when you have content ready to add
+- ✅ Empty folders are acceptable - they indicate planned content
+- ✅ Do not create empty folder hierarchies in advance
+- ✅ Add content following Educational Content Rules when ready
+- ✅ Create folders progressively as learning progresses
+
+**Current Status**: `Learning/01_Core-Architecture-Path/` and `Learning/02_Lead-Architect-Path/` exist but are empty, which is acceptable per this policy.
+
+## 📞 Support & Escalation
+
+**Questions about content placement?** → Check `docs/02_RepositoryStructure.md`
+
+**Content too long?** → Create multi-part structure (Part 1, Part 2, Part N)
+
+**Encoding issues?** → Search for, replace with Unicode equivalents
+
+**Link broken?** → Update URLs or fix internal file references
+
+**Structure outdated?** → Update `.github/copilot-instructions.md` and `README.md` immediately
+
+---
+
+## For More Information
+
+- **Repository**: <https://github.com/Swamy-s-Tech-Skills-Academy/ArchitectJourney>
+- **Master Roadmap**: `docs/01_UnifiedArchitectMasteryRoadmap.md`
+- **Structure Reference**: `docs/02_RepositoryStructure.md`
+- **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
+- **Automation Scripts**: `tools/psscripts/README.md`
