@@ -233,7 +233,7 @@ For each file:
   "technical_accuracy_score": "0-100",
   "clarity_and_readability_score": "0-100",
   "practical_application_score": "0-100",
-  "learning_effectiveness_score": "0-100",
+  "code_quality_score": "0-100",
   "examples_quality_score": "0-100",
   "pattern_documentation_score": "0-100"
 }
@@ -311,60 +311,6 @@ For each file:
 - **Template Completeness**: Verify templates include all necessary components (system prompts, user prompts, examples)
 - **Testing Coverage**: Check that evaluation and testing approaches are documented
 - **Documentation Quality**: Ensure all examples are well-documented with setup instructions
-
----
-
-## Start Now
-
-Open every file in the repository tree, run Prompt Engineering Playbook-specific checks, and produce the structured JSON report following these requirements. Focus on prompt quality, template completeness, code example correctness, and alignment with Azure OpenAI best practices.
-
-- If you include patches, ensure diffs use unified diff format and are properly escaped inside JSON strings.
-
-Strict privacy & reasoning constraint:
-
-- Use ReAct-style internal reasoning and actions to determine findings BUT DO NOT OUTPUT ANY CHAIN-OF-THOUGHT, internal logs, or private reasoning. Only provide the JSON structured output described above.
-- If you cannot confirm something (e.g., external API version), mark it “needs_verification” and state what command or URL the operator should run to confirm.
-
-Deliverables:
-
-- The complete JSON report as described above.
-- For each suggested_fix that is small (<= 30 lines), include a quick_fix_patch.
-- For larger fixes, include exact instructions and code snippets for maintainers to apply the change.
-- A final top-level "suggested_next_steps" with three clear actions (e.g., run linter, open PR with patches, run link-checker CI).
-
-Behavioral expectations:
-
-- **Prompt Engineering Focus**: Prioritize prompt quality, effectiveness, and alignment with Azure OpenAI best practices
-- **Template Quality**: Flag content that doesn't meet prompt engineering excellence standards
-- **Pattern Integrity**: Ensure prompt patterns are well-documented with clear use cases and examples
-- **Practical Relevance**: Verify content provides actionable prompt engineering guidance and integration examples
-- **Cross-Language Integration**: Validate proper examples across Python, C#, and Postman
-- **Code Quality**: Validate examples follow best practices, are runnable, and demonstrate proper Azure OpenAI integration
-- **Governance Compliance**: Ensure governance guidelines are clear and actionable
-- **Template Completeness**: Verify templates include all necessary components (system prompts, user prompts, examples)
-- **Testing Coverage**: Check that evaluation and testing approaches are documented
-- **Documentation Quality**: Ensure all examples are well-documented with setup instructions
-
----
-
-## Formatting Rules
-
-- Output as JSON (no prose outside JSON blocks)
-- Use 2-space indentation for readability
-- Escape patches in unified diff format
-- UTF-8 encoding only
-- Quote all JSON keys and string values
-
----
-
-## Deliverables
-
-1. Complete JSON report following Prompt Engineering Playbook output requirements
-2. Compliance scoring and prompt engineering quality assessment
-3. Pattern and template coverage analysis with gap identification
-4. Cross-reference validation results
-5. Content quality analysis by pattern type and language
-6. Three clear next steps to improve repository and prompt engineering effectiveness
 
 ---
 
