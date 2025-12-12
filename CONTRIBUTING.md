@@ -19,6 +19,7 @@ This project adheres to a Code of Conduct that all contributors are expected to 
 
 1. **Fork the repository** on GitHub
 2. **Clone your fork** locally:
+
    ```bash
    git clone git@github.com:YOUR_USERNAME/prompt-engineering-playbook.git
    cd prompt-engineering-playbook
@@ -39,6 +40,7 @@ This project adheres to a Code of Conduct that all contributors are expected to 
 ### Contributing Code
 
 1. **Create a feature branch** from `main`:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
@@ -83,7 +85,7 @@ git checkout -b task/implement-csharp
 - Include docstrings for functions and classes
 - Run `flake8` and `pytest` before committing
 
-### C#
+### C# (CSharp)
 
 - Follow C# coding conventions
 - Use XML documentation comments

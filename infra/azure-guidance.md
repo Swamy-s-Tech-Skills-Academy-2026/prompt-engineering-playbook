@@ -121,8 +121,7 @@ Integrate Application Insights for monitoring:
 
 ## Next Steps
 
-- Review code examples in `examples/` directory
+- Review code examples in `src/` directory
 - Follow governance guidelines in playbook
 - Set up monitoring and alerts
 - Implement security best practices
-

@@ -5,6 +5,7 @@ This directory contains Python examples for integrating with Azure OpenAI.
 ## Setup
 
 1. Create a virtual environment:
+
    ```bash
    python -m venv venv
    ```
@@ -14,6 +15,7 @@ This directory contains Python examples for integrating with Azure OpenAI.
    - Linux/Mac: `source venv/bin/activate`
 
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
@@ -21,7 +23,8 @@ This directory contains Python examples for integrating with Azure OpenAI.
 4. Configure environment variables:
    - Create a `.env` file (not committed to Git)
    - Add your Azure OpenAI credentials:
-     ```
+
+     ```text
      AZURE_OPENAI_ENDPOINT=your-endpoint
      AZURE_OPENAI_KEY=your-key
      AZURE_OPENAI_DEPLOYMENT_NAME=your-deployment
@@ -46,4 +49,3 @@ python samples/chat_example.py
 ## Requirements
 
 See `requirements.txt` for required packages.
-

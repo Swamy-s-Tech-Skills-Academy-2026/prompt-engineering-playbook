@@ -8,30 +8,30 @@ This playbook ensures uniformity, reduces model misbehaviour, accelerates onboar
 
 ---
 
-# **Task Descriptions**
+## Task Descriptions
 
-## **Task 1: Design and Author Prompt Engineering Playbook Framework – Day 1 (6.5 hours)**
+### Task 1: Design and Author Prompt Engineering Playbook Framework – Day 1 (6.5 hours)**
 
 **Description:**
 Establish the foundational structure and outline of the Prompt Engineering Playbook. Define the overall sections, chapter hierarchy, layout conventions, and documentation standards. Identify prompt types, use-case categories, and conceptual areas that will be covered across the playbook. Draft the governance scope, naming conventions, versioning approach, and documentation guidelines. Produce the initial skeleton document and high-level content architecture.
 
 ---
 
-## **Task 2: Design and Author Prompt Engineering Playbook Framework – Day 2 (6.5 hours)**
+### Task 2: Design and Author Prompt Engineering Playbook Framework – Day 2 (6.5 hours)**
 
 **Description:**
 Expand the framework by creating standard prompt patterns (instruction-based, role-based, RAG, chain-of-thought scaffolding, evaluation prompts). Develop reusable prompt templates for summarization, classification, extraction, transformation, and code-generation tasks. Define governance rules—including review workflows, storage strategy, safety considerations, and quality guidelines. Refine and complete the full framework document that will serve as the blueprint for the detailed playbook content.
 
 ---
 
-## **Task 3: Implement Azure OpenAI Integration Using Python and Postman (6.5 hours)**
+### Task 3: Implement Azure OpenAI Integration Using Python and Postman (6.5 hours)**
 
 **Description:**
 Implement working examples that demonstrate how to interact with Azure OpenAI using Python and Postman. Develop sample scripts using the Azure OpenAI SDK and REST APIs, including chat completions, embeddings, and model configuration. Create Postman collections with environment variables, authentication setup, and test calls. Document recommended project structure, error-handling, logging, and configuration approaches. Integrate these examples into the playbook framework for cross-language reference.
 
 ---
 
-## **Task 4: Implement Azure OpenAI Integration Using C# (6.5 hours)**
+### Task 4: Implement Azure OpenAI Integration Using C# (6.5 hours)**
 
 **Description:**
 Develop C# examples that illustrate Azure OpenAI usage through the Azure OpenAI .NET SDK and REST API patterns. Implement demonstration code for chat completions, embeddings, function calling, and structured responses. Set up recommended client initialization patterns, retry logic, configuration handling, and logging. Document these patterns and incorporate them into the playbook framework to ensure consistency across supported languages.
@@ -63,7 +63,7 @@ For each stage I will give precise, actionable items you can copy & run, plus re
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 prompt-engineering-playbook/
@@ -109,7 +109,7 @@ prompt-engineering-playbook/
 
 ---
 
-# Initial Setup — exact steps (copy/paste)
+## Initial Setup — exact steps (copy/paste)
 
 1. Create repo on GitHub (name: `prompt-engineering-playbook`).
 2. Clone locally:
@@ -140,7 +140,7 @@ git checkout -b task/implement-csharp
 
 ---
 
-# Security & secrets (what to do)
+## Security and secrets (what to do)
 
 * Never commit API keys. Use GitHub repository secrets:
 
@@ -151,7 +151,7 @@ git checkout -b task/implement-csharp
 
 ---
 
-# CI examples I can produce now
+## CI examples I can produce now
 
 * `ci-python.yml` — runs `python -m venv`, `pip install -r requirements.txt`, `pytest`, `flake8`.
 * `ci-dotnet.yml` — builds solution, runs `dotnet test`.
@@ -159,7 +159,7 @@ git checkout -b task/implement-csharp
 
 ---
 
-# Example content I can generate immediately (pick any or multiple)
+## Example content I can generate immediately (pick any or multiple)
 
 I can produce full file content for each of the following in this chat so you can paste into the repo:
 
@@ -175,7 +175,7 @@ I can produce full file content for each of the following in this chat so you ca
 
 ---
 
-# How I will guide you step-by-step (workflow)
+## How I will guide you step-by-step (workflow)
 
 1. You tell me which artifact(s) you want first (e.g., `README.md` + Day1 playbook skeleton + Python sample).
 2. I paste the full file(s) here in the chat. You copy them into your repo and commit.
@@ -187,7 +187,7 @@ I can produce full file content for each of the following in this chat so you ca
 
 ---
 
-# Example: Small ready snippet (Playbook TOC + README excerpt)
+## Example: Small ready snippet (Playbook TOC + README excerpt)
 
 If you want immediate content, here is a compact starter for `playbook/01-structure-and-toc.md` and a `README.md` excerpt. Tell me and I’ll output the full files now.
 

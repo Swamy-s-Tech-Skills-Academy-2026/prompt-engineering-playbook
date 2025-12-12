@@ -7,6 +7,7 @@ This directory contains C# examples for integrating with Azure OpenAI using the 
 1. Ensure .NET SDK is installed (version 8.0 or later)
 
 2. Restore NuGet packages:
+
    ```bash
    dotnet restore
    ```
@@ -14,6 +15,7 @@ This directory contains C# examples for integrating with Azure OpenAI using the 
 3. Configure app settings:
    - Update `appsettings.json` or `appsettings.Development.json`
    - Add your Azure OpenAI configuration:
+
      ```json
      {
        "AzureOpenAI": {
@@ -46,4 +48,3 @@ dotnet run --project samples/ChatExample
 - `Azure.AI.OpenAI` - Azure OpenAI .NET SDK
 - `Microsoft.Extensions.Configuration` - Configuration management
 - `Microsoft.Extensions.Logging` - Logging
-

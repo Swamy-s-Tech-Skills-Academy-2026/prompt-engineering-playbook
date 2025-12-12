@@ -62,4 +62,3 @@ Additional documentation and architecture diagrams are available in:
 
 - **Previous**: [Overview](00-overview.md)
 - **Next**: [Patterns and Anti-patterns](02-patterns-and-anti-patterns.md)
-

@@ -4,7 +4,7 @@ This section provides reusable prompt templates for common tasks.
 
 ## Summarization Template
 
-```
+```text
 Summarize the following [content type] in [length] sentences.
 
 Focus on:
@@ -17,7 +17,7 @@ Focus on:
 
 ## Classification Template
 
-```
+```text
 Classify the following [item type] into one of these categories:
 - [Category 1]: [Description]
 - [Category 2]: [Description]
@@ -33,7 +33,7 @@ Provide:
 
 ## Extraction Template
 
-```
+```text
 Extract the following information from the text below:
 - [Field 1]: [Description]
 - [Field 2]: [Description]
@@ -46,7 +46,7 @@ Format the output as JSON with the specified fields.
 
 ## Transformation Template
 
-```
+```text
 Transform the following [input type] into [output type].
 
 Requirements:
@@ -61,7 +61,7 @@ Provide the transformed output.
 
 ## Code Generation Template
 
-```
+```text
 You are a [programming language] expert.
 
 Generate [type of code] that:
@@ -102,4 +102,3 @@ Common parameters to customize:
 
 - **Previous**: [Patterns and Anti-patterns](02-patterns-and-anti-patterns.md)
 - **Next**: [Governance](04-governance.md)
-

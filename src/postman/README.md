@@ -59,4 +59,3 @@ Optional variables:
 - `model` - Model name (if different from deployment)
 - `temperature` - Temperature setting
 - `max_tokens` - Maximum tokens
-
