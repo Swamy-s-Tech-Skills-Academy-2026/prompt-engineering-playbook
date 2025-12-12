@@ -35,9 +35,7 @@
 ### Current Structure (As of November 24, 2025)
 
 ```text
-ArchitectJourney/
-├── .copilot/                              # Copilot configuration
-│   └── settings.json
+prompt-engineering-playbook/
 ├── .cursor/                               # Cursor AI configuration
 │   └── rules/                             # Project rules (this directory)
 │       ├── 01_educational-content-rules.mdc
@@ -48,26 +46,34 @@ ArchitectJourney/
 │       ├── 06_cross-domain-integration.mdc
 │       └── README.md
 ├── .github/                               # GitHub configuration
+│   ├── workflows/                         # CI/CD workflows
+│   ├── ISSUE_TEMPLATE/                    # Issue templates
+│   ├── PULL_REQUEST_TEMPLATE.md           # PR template
 │   ├── copilot-instructions.md            # GitHub Copilot instructions
 │   └── prompts/                           # Reusable prompt templates
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
-├── docs/                                  # Documentation hub
-│   ├── 01_GitHub-Organization-Strategy.md
-│   ├── 02_Workspace-Review-2025-11-23.md
-│   ├── review-reports/                     # All review reports (migration, content review, etc.)
-│   │   └── [DDMonYYYY.md]                 # Example: 24Nov2025.md (date-based naming)
-│   └── images/                            # Architecture diagrams and assets
-│       └── .gitkeep
+├── playbook/                              # Core playbook framework
+│   ├── 00-overview.md
+│   ├── 01-structure-and-toc.md
+│   ├── 02-patterns-and-anti-patterns.md
+│   ├── 03-templates.md
+│   ├── 04-governance.md
+│   └── 05-evaluation-and-testing.md
+├── src/                                   # Code examples
+│   ├── python/
+│   ├── csharp/
+│   └── postman/
+├── infra/                                 # Infrastructure guidance
+│   └── azure-guidance.md
+├── docs/                                  # Additional documentation
+│   └── architecture-diagrams/
 ├── LICENSE                                 # MIT License
 ├── README.md                               # Main repository documentation
+├── CONTRIBUTING.md                         # Contribution guidelines
+├── CODE_OF_CONDUCT.md                     # Code of conduct
 └── .gitignore                             # Git ignore rules
 ```
-
-### Current Structure (As of November 24, 2025)
-
-```text
-ArchitectJourney/
 ├── .copilot/                              # Copilot configuration
 ├── .cursor/                               # Cursor AI configuration
 ├── .github/                               # GitHub configuration

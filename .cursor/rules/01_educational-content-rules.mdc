@@ -1,4 +1,4 @@
-# Educational Content Rules (ArchitectJourney Knowledge Base)
+# Content Rules (Prompt Engineering Playbook)
 
 **Version**: 1.0  
 **Last Updated**: November 6, 2025  
@@ -24,10 +24,10 @@
 **Step-by-step process for creating original educational content**:
 
 1. **Source Intake**: Skim for intent and big ideas; don't copy notes verbatim
-2. **Concept Map**: Create fresh outline with different sectioning tailored to ArchitectJourney
+2. **Concept Map**: Create fresh outline with different sectioning tailored to the Prompt Engineering Playbook
 3. **Teach Differently**: Use new analogies, scenarios, datasets, use-cases (avoid source examples)
 4. **Produce Original Artifacts**: Explanations, Mermaid diagrams (with ASCII fallback), minimal examples
-5. **Cross-Link in ArchitectJourney**: Add prerequisites/builds-upon/enables across tracks
+5. **Cross-Link in Playbook**: Add references and connections across playbook sections
 6. **Similarity Audit**: Ensure no sentences/structures resemble source
 7. **Optional References**: Add "References/Inspired by" links (no copied phrasing)
 
@@ -75,7 +75,7 @@
 
 ## 📋 Required Content Structure
 
-### 5 Required ArchitectJourney Metadata Fields
+### 5 Required Playbook Metadata Fields
 
 Every educational content file MUST include:
 
@@ -240,14 +240,14 @@ class ProductFactory:
         return ProductB()
 ```
 
-> **Full Implementation**: See complete Factory Pattern implementation in [Python repository](https://github.com/SwamysArchitectJourney-2026/Python/tree/main/design-patterns/factory)
+> **Full Implementation**: See complete code examples in the `src/` directory
 ```
 
 ### Source Materials Staging Area
 
 **Location**: `source-materials/` (at repository root, git-ignored)
 
-**Purpose**: **Staging folder for migration** - Temporary staging area where source content is placed before review and transformation into ArchitectJourney educational content.
+**Purpose**: **Staging folder for migration** - Temporary staging area where source content is placed before review and transformation into playbook content.
 
 **Critical Workflow**:
 
