@@ -1,7 +1,7 @@
-﻿# GitHub Copilot Instructions for ArchitectJourney
+﻿# GitHub Copilot Instructions for Prompt Engineering Playbook
 
-**Version**: 3.2  
-**Last Updated**: November 23, 2025  
+**Version**: 1.0  
+**Last Updated**: December 2025  
 **Critical Principle**: Update this file IMMEDIATELY when repository structure changes
 
 ---

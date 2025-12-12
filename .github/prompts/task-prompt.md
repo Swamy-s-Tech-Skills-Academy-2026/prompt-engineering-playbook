@@ -1,26 +1,22 @@
-# ArchitectJourney Repository Verification and Content Enhancement
+# Prompt Engineering Playbook Repository Verification and Content Enhancement
 
 ## Context
 
-You are working with **ArchitectJourney**, a comprehensive learning and reference repository for aspiring software architects. The repository combines development principles, AI/ML, DevOps, leadership frameworks, and strategic insights across:
+You are working with **Prompt Engineering Playbook**, a comprehensive playbook repository that standardizes how prompts are designed, developed, tested, and integrated across C#, Python, and Postman workflows using Azure OpenAI. The repository provides prompt structures, reusable patterns, templates, governance guidelines, and code integration examples.
 
-- **9 Progressive Levels** (Foundation Mastery → Leadership, Strategy & Innovation)
-- **9-Phase LeadArchitect Program** (Reboot → Leadership Impact)
-- **13 Reference Library Domains** (Development Fundamentals, Programming Languages, AI/ML, Data Science, Cloud Platforms, DevOps, Security & Governance, Enterprise Architecture, Product Delivery, Leadership & Strategy, Networking & Infrastructure, Emerging Technologies, Professional Growth)
+**Repository Structure:**
+- `playbook/` - Core playbook framework and documentation
+- `examples/` - Code examples in Python, C#, and Postman
+- `infra/` - Azure infrastructure guidance
+- `docs/` - Additional documentation and architecture diagrams
+- `.github/` - GitHub workflows and templates
 
-Target Folders for Verification:
-
-- `01_ReferenceLibrary/`
-- `02_LeadArchitect-Learning/`
-- `docs/`
-- `.github/`
-
-Primary Objective:
-Perform a COMPREHENSIVE audit of the repository using ArchitectJourney-specific educational standards and quality criteria. Verify file contents, run structured checks, and produce actionable reports with suggestions and fixes.
+**Primary Objective:**
+Perform a COMPREHENSIVE audit of the repository using Prompt Engineering Playbook standards and quality criteria. Verify file contents, run structured checks, and produce actionable reports with suggestions and fixes.
 
 ---
 
-## ArchitectJourney-Specific Verification Checks
+## Prompt Engineering Playbook Verification Checks
 
 ### A. **File Content Inspection**
 
@@ -42,7 +38,7 @@ Perform a COMPREHENSIVE audit of the repository using ArchitectJourney-specific 
 - Check alignment with architectural best practices and design patterns
 - Validate examples are current, relevant, and runnable
 
-### D. **ArchitectJourney Metadata Requirements**
+### D. **Prompt Engineering Playbook Metadata Requirements**
 
 Check for presence of:
 
@@ -133,21 +129,21 @@ Check for presence of:
 
 ---
 
-## ArchitectJourney Content Standards
+## Prompt Engineering Playbook Content Standards
 
-### Learning Structure
+### Playbook Structure
 
-- **9-Level Foundation**: Progressive from Level 1 (Foundation Mastery) to Level 9 (Leadership, Strategy & Innovation)
-- **9-Phase LeadArchitect**: Intensive program organized into 9 phases, each with 9 specialized clusters
-- **13 Reference Domains**: Comprehensive coverage of essential architectural knowledge areas
-- **Progressive Complexity**: Content builds from foundational concepts to advanced strategic decision-making
+- **Prompt Patterns**: Instruction-based, role-based, RAG, chain-of-thought, evaluation prompts
+- **Templates**: Reusable templates for summarization, classification, extraction, transformation, code-generation
+- **Governance**: Review workflows, storage strategy, safety considerations, quality guidelines
+- **Code Integration**: Examples in Python, C#, and Postman for Azure OpenAI integration
 
 ### Content Organization
 
-- **By Level**: Content clearly indicates which level(s) it addresses
-- **By Domain**: Content properly categorized in 01_ReferenceLibrary under correct domain
-- **By Phase**: LeadArchitect content organized by phase and cluster
-- **By Learning Modality**: Mix of conceptual explanation, code examples, diagrams, and practical projects
+- **By Pattern Type**: Content organized by prompt pattern (instruction, role-based, RAG, etc.)
+- **By Use Case**: Templates organized by task type (summarization, classification, extraction, etc.)
+- **By Language**: Code examples organized by implementation language (Python, C#, Postman)
+- **By Integration**: Examples show Azure OpenAI SDK and REST API patterns
 
 ### Quality Requirements
 
@@ -177,10 +173,10 @@ Check for presence of:
 
 ```json
 {
-  "repo_name": "ArchitectJourney",
+  "repo_name": "prompt-engineering-playbook",
   "total_files_checked": 0,
   "total_issues_found": 0,
-  "architect_journey_compliance_percentage": 0.0,
+  "playbook_compliance_percentage": 0.0,
   "high_severity_count": 0,
   "medium_severity_count": 0,
   "low_severity_count": 0,
@@ -210,23 +206,23 @@ For each file:
       "description": "string",
       "suggested_fix": "string",
       "fix_type": "replace|delete|add|rename|format|link-fix|metadata-add",
-      "aj_violation_type": "string (e.g., missing-objectives, broken-link, outdated-pattern)"
+      "violation_type": "string (e.g., missing-objectives, broken-link, outdated-pattern)"
     }
   ],
-  "overall_status": "aj_compliant|needs_updates|remove",
+  "overall_status": "compliant|needs_updates|remove",
   "quick_fix_patch": "string or null"
 }
 ```
 
-### 3. LEARNING_PATH_ANALYSIS
+### 3. PATTERN_COVERAGE_ANALYSIS
 
 ```json
 {
-  "level_coverage": { "Level1": 0, "Level2": 0, "..": 0, "Level9": 0 },
-  "phase_coverage": { "Phase01": 0, "Phase02": 0, "..": 0, "Phase09": 0 },
-  "domain_distribution": { "Development": 0, "AI-ML": 0, "..": 0 },
-  "progression_score": "0-100",
-  "gap_analysis": ["identified learning gaps", "missing domain coverage"]
+  "pattern_coverage": { "instruction-based": 0, "role-based": 0, "rag": 0, "chain-of-thought": 0, "evaluation": 0 },
+  "template_coverage": { "summarization": 0, "classification": 0, "extraction": 0, "transformation": 0, "code-generation": 0 },
+  "language_coverage": { "python": 0, "csharp": 0, "postman": 0 },
+  "completeness_score": "0-100",
+  "gap_analysis": ["missing patterns", "missing templates", "missing language examples"]
 }
 ```
 
@@ -319,16 +315,16 @@ Deliverables:
 
 Behavioral expectations:
 
-- **ArchitectJourney-First Approach**: Prioritize learning effectiveness and alignment with 9-level and 9-phase structures
-- **Educational Quality Focus**: Flag content that doesn't meet architectural excellence standards
-- **Learning Path Integrity**: Ensure content fits logically within levels and phases with proper prerequisites
-- **Practical Relevance**: Verify content provides actionable architectural guidance and decision-making frameworks
-- **Cross-Domain Integration**: Validate proper connections between learning tracks and domains
-- **Metadata Compliance**: Prioritize missing learning objectives and prerequisites as high-severity
-- **Progressive Complexity**: Ensure content properly builds from foundational to advanced concepts
-- **Pattern Excellence**: Verify architectural patterns include intent, participants, when/when-not-to-use, and trade-offs
-- **Code Quality**: Validate examples follow best practices and are runnable
-- **Visual Communication**: Check that diagrams effectively support learning objectives
+- **Prompt Engineering Focus**: Prioritize prompt quality, effectiveness, and alignment with Azure OpenAI best practices
+- **Template Quality**: Flag content that doesn't meet prompt engineering excellence standards
+- **Pattern Integrity**: Ensure prompt patterns are well-documented with clear use cases and examples
+- **Practical Relevance**: Verify content provides actionable prompt engineering guidance and integration examples
+- **Cross-Language Integration**: Validate proper examples across Python, C#, and Postman
+- **Code Quality**: Validate examples follow best practices, are runnable, and demonstrate proper Azure OpenAI integration
+- **Governance Compliance**: Ensure governance guidelines are clear and actionable
+- **Template Completeness**: Verify templates include all necessary components (system prompts, user prompts, examples)
+- **Testing Coverage**: Check that evaluation and testing approaches are documented
+- **Documentation Quality**: Ensure all examples are well-documented with setup instructions
 
 ---
 
@@ -344,15 +340,15 @@ Behavioral expectations:
 
 ## Deliverables
 
-1. Complete JSON report following ArchitectJourney output requirements
-2. Compliance scoring and educational quality assessment
-3. Learning path analysis and gap identification
+1. Complete JSON report following Prompt Engineering Playbook output requirements
+2. Compliance scoring and prompt engineering quality assessment
+3. Pattern and template coverage analysis with gap identification
 4. Cross-reference validation results
-5. Content quality analysis by domain and level
-6. Three clear next steps to improve repository and learning effectiveness
+5. Content quality analysis by pattern type and language
+6. Three clear next steps to improve repository and prompt engineering effectiveness
 
 ---
 
 ## Start Now
 
-Open every file in the repository tree, run ArchitectJourney-specific checks, and produce the structured JSON report following these requirements. Focus on learning effectiveness, content quality, architectural soundness, and alignment with the 9-level and 9-phase structure.
+Open every file in the repository tree, run Prompt Engineering Playbook-specific checks, and produce the structured JSON report following these requirements. Focus on prompt quality, template completeness, code example correctness, and alignment with Azure OpenAI best practices.
