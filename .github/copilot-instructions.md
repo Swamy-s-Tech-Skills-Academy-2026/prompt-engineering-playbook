@@ -139,68 +139,48 @@ Interleave thinking with action in iterative cycles:
 
 ---
 
-## 📁 Current Repository Structure (AS OF NOVEMBER 24, 2025)
+## 📁 Current Repository Structure
 
-### **Actual Current Structure** (verify with: `tree /F /A`)
+### **Repository Structure** (as per README.md)
 
 ```text
-ArchitectJourney/
-├── .copilot/                              # Copilot configuration
-│   └── settings.json
-├── .cursor/                               # Cursor AI configuration
-│   └── rules/                             # Project rules and guidelines
-│       ├── 01_educational-content-rules.mdc
-│       ├── 02_repository-structure.mdc
-│       ├── 03_quality-assurance.mdc
-│       ├── 04_markdown-standards.mdc
-│       ├── 05_primary-directives.mdc
-│       ├── 06_cross-domain-integration.mdc
-│       └── README.md
-├── .github/                               # GitHub configuration
-│   ├── copilot-instructions.md            # THIS FILE - Update when structure changes
+prompt-engineering-playbook/
+├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+├── .github/
+│   ├── workflows/
+│   │   ├── ci-python.yml
+│   │   ├── ci-dotnet.yml
+│   │   └── validate-postman.yml
+│   ├── ISSUE_TEMPLATE/
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── copilot-instructions.md            # THIS FILE
 │   └── prompts/                           # Reusable prompt templates
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
-├── docs/                                  # Documentation hub
-│   ├── 01_GitHub-Organization-Strategy.md  # GitHub organization setup guide
-│   ├── 02_Workspace-Review-2025-11-23.md   # Workspace review and recommendations
-│   ├── review-reports/                     # All review reports (migration, content review, etc.)
-│   │   └── [DDMonYYYY.md]                 # Example: 24Nov2025.md (date-based naming)
-│   └── images/                            # Architecture diagrams and assets
-│       └── .gitkeep
-├── LICENSE                                 # MIT License
-├── README.md                               # Main repository documentation
-├── source-materials/                       # Staging area (at repository root, git-ignored)
-├── src/                                    # Source content (organized)
-│   ├── 01_Reference/                      # Reference library
-│   ├── 02_Learning/                       # Learning paths
-│   └── 03_Interview-Prep/                 # Interview preparation
-└── .gitignore                             # Git ignore rules
-```
-
-### **Actual Current Structure** (Updated November 24, 2025)
-
-```text
-ArchitectJourney/
-├── .copilot/                              # Copilot configuration
-├── .cursor/                               # Cursor AI configuration
-├── .github/                               # GitHub configuration
-├── docs/                                  # Documentation hub
-├── src/                                   # Source content (organized)
-│   ├── 01_Reference/                     # Reference library (static knowledge)
-│   │   ├── 01_Development/               # Software development fundamentals
-│   │   ├── 02_AI-and-ML/                 # AI/ML knowledge base
-│   │   └── 05_DevOps/                    # DevOps practices and tools
-│   ├── 02_Learning/                       # Learning paths content (coming soon)
-│   └── 03_Interview-Prep/                # Interview preparation materials
-│       ├── Common/                       # Shared interview content
-│       ├── TPM/                          # Technical Project Manager prep
-│       ├── Architect/                    # Software Architect prep
-│       ├── Solution-Architect/           # Solution Architect prep
-│       └── Engineering-Manager/          # Engineering Manager prep
-├── source-materials/                      # Staging area (at repository root, git-ignored)
-└── tools/                                 # Automation and utilities
-    └── psscripts/                         # PowerShell automation scripts
+├── playbook/                              # Core playbook framework
+│   ├── 00-overview.md
+│   ├── 01-structure-and-toc.md
+│   ├── 02-patterns-and-anti-patterns.md
+│   ├── 03-templates.md
+│   ├── 04-governance.md
+│   └── 05-evaluation-and-testing.md
+├── examples/                               # Code examples
+│   ├── python/
+│   │   ├── README.md
+│   │   ├── requirements.txt
+│   │   └── samples/
+│   ├── csharp/
+│   │   ├── README.md
+│   │   └── samples/
+│   └── postman/
+│       ├── prompt-playbook.postman_collection.json
+│       └── prompt-playbook.postman_environment.json
+├── infra/                                  # Infrastructure guidance
+│   └── azure-guidance.md
+└── docs/                                   # Additional documentation
+    └── architecture-diagrams/
 ```
 
 ### **Documentation Philosophy**
@@ -227,16 +207,16 @@ ArchitectJourney/
 
 ## 🧭 Repository Context & Purpose
 
-**ArchitectJourney** is a comprehensive learning and reference repository for aspiring software architects. It provides:
+**Prompt Engineering Playbook** is a comprehensive playbook that standardizes how prompts are designed, developed, tested, and integrated across C#, Python, and Postman workflows using Azure OpenAI. It provides:
 
-- Structured learning roadmap from foundational programming to architectural mastery
-- Reference materials for design patterns, principles, and best practices
-- Practical project examples and implementation guides
-- Leadership and strategic frameworks for technical decision-making
+- Standard prompt patterns (instruction-based, role-based, RAG, chain-of-thought, evaluation)
+- Reusable prompt templates for common tasks (summarization, classification, extraction, transformation, code-generation)
+- Governance guidelines including review workflows, storage strategy, safety considerations
+- Code integration examples in Python, C#, and Postman for Azure OpenAI
 
-**Target Audience**: Developers → Software Architects → Lead Architects → Technology Directors
+**Target Audience**: Engineering teams working with Azure OpenAI, prompt engineers, AI application developers
 
-**Learning Framework**: 9-stage unified progression combining core architecture fundamentals with leadership development
+**Business Value**: Ensures uniformity, reduces model misbehaviour, accelerates onboarding, improves productivity, and provides a consistent framework for enterprise-grade Azure OpenAI development
 
 ---
 

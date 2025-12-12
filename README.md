@@ -63,20 +63,25 @@ For each stage I will give precise, actionable items you can copy & run, plus re
 
 ---
 
-# Suggested repo structure (copy this `tree` into your README)
+# Repository Structure
 
 ```
 prompt-engineering-playbook/
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
 ├── .github/
 │   ├── workflows/
 │   │   ├── ci-python.yml
 │   │   ├── ci-dotnet.yml
 │   │   └── validate-postman.yml
 │   ├── ISSUE_TEMPLATE/
-│   └── PULL_REQUEST_TEMPLATE.md
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   ├── copilot-instructions.md
+│   └── prompts/
+│       ├── smart-prompt-framework-guide.md
+│       └── task-prompt.md
 ├── playbook/
 │   ├── 00-overview.md
 │   ├── 01-structure-and-toc.md
@@ -93,6 +98,7 @@ prompt-engineering-playbook/
 │   │   ├── README.md
 │   │   └── samples/
 │   └── postman/
+│       ├── README.md
 │       ├── prompt-playbook.postman_collection.json
 │       └── prompt-playbook.postman_environment.json
 ├── infra/
