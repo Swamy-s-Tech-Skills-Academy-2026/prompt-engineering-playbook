@@ -10,35 +10,35 @@ This playbook ensures uniformity, reduces model misbehaviour, accelerates onboar
 
 ## Task Descriptions
 
-### Task 1: Design and Author Prompt Engineering Playbook Framework – Day 1 (6.5 hours)**
+### Task 1: Design and Author Prompt Engineering Playbook Framework – Day 1 (6.5 hours)
 
 **Description:**
 Establish the foundational structure and outline of the Prompt Engineering Playbook. Define the overall sections, chapter hierarchy, layout conventions, and documentation standards. Identify prompt types, use-case categories, and conceptual areas that will be covered across the playbook. Draft the governance scope, naming conventions, versioning approach, and documentation guidelines. Produce the initial skeleton document and high-level content architecture.
 
 ---
 
-### Task 2: Design and Author Prompt Engineering Playbook Framework – Day 2 (6.5 hours)**
+### Task 2: Design and Author Prompt Engineering Playbook Framework – Day 2 (6.5 hours)
 
 **Description:**
 Expand the framework by creating standard prompt patterns (instruction-based, role-based, RAG, chain-of-thought scaffolding, evaluation prompts). Develop reusable prompt templates for summarization, classification, extraction, transformation, and code-generation tasks. Define governance rules—including review workflows, storage strategy, safety considerations, and quality guidelines. Refine and complete the full framework document that will serve as the blueprint for the detailed playbook content.
 
 ---
 
-### Task 3: Implement Azure OpenAI Integration Using Python and Postman (6.5 hours)**
+### Task 3: Implement Azure OpenAI Integration Using Python and Postman (6.5 hours)
 
 **Description:**
 Implement working examples that demonstrate how to interact with Azure OpenAI using Python and Postman. Develop sample scripts using the Azure OpenAI SDK and REST APIs, including chat completions, embeddings, and model configuration. Create Postman collections with environment variables, authentication setup, and test calls. Document recommended project structure, error-handling, logging, and configuration approaches. Integrate these examples into the playbook framework for cross-language reference.
 
 ---
 
-### Task 4: Implement Azure OpenAI Integration Using C# (6.5 hours)**
+### Task 4: Implement Azure OpenAI Integration Using C# (6.5 hours)
 
 **Description:**
 Develop C# examples that illustrate Azure OpenAI usage through the Azure OpenAI .NET SDK and REST API patterns. Implement demonstration code for chat completions, embeddings, function calling, and structured responses. Set up recommended client initialization patterns, retry logic, configuration handling, and logging. Document these patterns and incorporate them into the playbook framework to ensure consistency across supported languages.
 
 ---
 
-# What I’ll provide (how I’ll guide you)
+## What I'll provide (how I'll guide you)
 
 For each stage I will give precise, actionable items you can copy & run, plus ready-to-paste files:
 
@@ -166,8 +166,8 @@ I can produce full file content for each of the following in this chat so you ca
 1. `README.md` (project overview + quickstart).
 2. `playbook/00-overview.md` and `01-structure-and-toc.md` (TOC for the playbook).
 3. A set of 6–8 canonical prompt templates in Markdown (summarize, extract, classify, RAG, instruction, user+assistant scaffolding).
-4. `examples/python/samples/chat_example.py` — runnable script showing chat completion/embeddings (with safe handling of env vars).
-5. `examples/csharp/samples/Program.cs` — .NET console sample using Azure OpenAI SDK (NuGet usage, sample code).
+4. `src/python/samples/chat_example.py` — runnable script showing chat completion/embeddings (with safe handling of env vars).
+5. `src/csharp/samples/Program.cs` — .NET console sample using Azure OpenAI SDK (NuGet usage, sample code).
 6. Postman collection JSON and environment file.
 7. GitHub Actions YAML files described above.
 8. `CONTRIBUTING.md` + `PULL_REQUEST_TEMPLATE.md` + `ISSUE_TEMPLATE/bug_report.md`.
@@ -193,4 +193,4 @@ If you want immediate content, here is a compact starter for `playbook/01-struct
 
 ---
 
-If you want me to start now, tell me which files you want first (for example: `README.md`, `playbook/01-structure-and-toc.md`, and `examples/python/samples/chat_example.py`) and I will generate them fully here, ready to paste into your repository.
+If you want me to start now, tell me which files you want first (for example: `README.md`, `playbook/01-structure-and-toc.md`, and `src/python/samples/chat_example.py`) and I will generate them fully here, ready to paste into your repository.
