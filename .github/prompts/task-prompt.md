@@ -5,8 +5,9 @@
 You are working with **Prompt Engineering Playbook**, a comprehensive playbook repository that standardizes how prompts are designed, developed, tested, and integrated across C#, Python, and Postman workflows using Azure OpenAI. The repository provides prompt structures, reusable patterns, templates, governance guidelines, and code integration examples.
 
 **Repository Structure:**
+
 - `playbook/` - Core playbook framework and documentation
-- `examples/` - Code examples in Python, C#, and Postman
+- `src/` - Code examples in Python, C#, and Postman
 - `infra/` - Azure infrastructure guidance
 - `docs/` - Additional documentation and architecture diagrams
 - `.github/` - GitHub workflows and templates
@@ -18,52 +19,51 @@ Perform a COMPREHENSIVE audit of the repository using Prompt Engineering Playboo
 
 ## Prompt Engineering Playbook Verification Checks
 
-### A. **File Content Inspection**
+### A. File Content Inspection
 
 - Open and verify every file (no file skipped)
 - Ensure markdown formatting compliance
-- Check for completeness and consistency with learning objectives
+- Check for completeness and consistency with playbook objectives
 
-### B. **Learning Path Alignment**
+### B. Prompt Pattern Alignment
 
-- Verify content aligns with correct Level (1-9) or Phase (01-09)
-- Validate prerequisites are appropriate and documented
-- Check learning progression is logical and sequential
-- Ensure cross-references between levels/phases are accurate
+- Verify prompts follow established patterns (instruction-based, role-based, RAG, chain-of-thought, evaluation)
+- Validate prompt structure follows template guidelines
+- Check pattern documentation is complete and accurate
+- Ensure examples demonstrate proper pattern usage
 
-### C. **Content Accuracy & Quality**
+### C. Content Accuracy and Quality
 
-- Verify technical correctness and architectural soundness
-- Ensure completeness for stated learning objectives
-- Check alignment with architectural best practices and design patterns
-- Validate examples are current, relevant, and runnable
+- Verify technical correctness and Azure OpenAI alignment
+- Ensure completeness for stated objectives
+- Check alignment with prompt engineering best practices
+- Validate code examples are current, relevant, and runnable
 
-### D. **Prompt Engineering Playbook Metadata Requirements**
+### D. Playbook Metadata Requirements
 
 Check for presence of:
 
-- Learning Level / Phase designation (e.g., Level 3, Phase 02)
-- Prerequisites and dependencies
-- Learning Objectives (clear, measurable, specific)
-- Core Topics and Practical Projects
-- Related Topics and cross-references to other levels/phases
-- Estimated Learning Time (where applicable)
+- Pattern type designation (instruction-based, role-based, RAG, etc.)
+- Use case description
+- Clear objectives (specific, measurable)
+- Code examples in Python, C#, or Postman
+- Related patterns and cross-references
 
-### E. **Naming Convention Compliance**
+### E. Naming Convention Compliance
 
 - Use kebab-case for filenames
-- Use consistent naming patterns within domain folders
+- Use consistent naming patterns within folders
 - Verify folder structure follows repository standards
-- Check zero-padded numeric prefixes (01_, 02_, not 00_)
+- Check proper organization by pattern type and language
 
-### F. **Broken Links & References**
+### F. Broken Links and References
 
 - Verify all internal cross-references work correctly
 - Check README files and navigation structure
 - Validate external resource links and references
-- Ensure level/phase navigation links are accurate
+- Ensure pattern navigation links are accurate
 
-### G. **Content Quality Standards**
+### G. Content Quality Standards
 
 - Spellcheck and grammar verification
 - Character encoding validation (UTF-8 only)
@@ -71,61 +71,61 @@ Check for presence of:
 - Code example correctness and completeness
 - Proper code fence language specification
 
-### H. **Domain Organization**
+### H. Code Organization
 
-- Verify proper placement in correct domain folder
-- Check cross-domain references are accurate
-- Validate level/phase organization is clear and discoverable
-- Ensure no content duplication across domains
+- Verify proper placement in correct language folder (python, csharp, postman)
+- Check cross-references are accurate
+- Validate organization is clear and discoverable
+- Ensure no content duplication
 
-### I. **Repository Structure Clarity**
+### I. Repository Structure Clarity
 
 - Verify folder organization is intuitive
 - Check navigability and discoverability
 - Validate table of contents accuracy
 - Ensure README files guide users through content
 
-### J. **Content Currency & Relevance**
+### J. Content Currency and Relevance
 
-- Verify content reflects current technologies and practices
+- Verify content reflects current Azure OpenAI APIs and practices
 - Check for deprecated patterns or outdated information
-- Validate relevance to stated learning objectives
-- Assess alignment with industry trends in architecture
+- Validate relevance to stated objectives
+- Assess alignment with industry trends in prompt engineering
 
-### K. **Practical Application**
+### K. Practical Application
 
 - Verify examples are runnable and technically correct
-- Check projects align with learning objectives
-- Validate edge cases and error handling coverage
+- Check code aligns with learning objectives
+- Validate error handling coverage
 - Ensure code examples follow best practices for their language/framework
 
-### L. **Educational Effectiveness**
+### L. Template Effectiveness
 
-- Assess clarity and readability for target audience
-- Verify learning progression (simple → complex)
-- Check engagement through practical relevance
-- Validate use of multiple learning modalities (text, code, diagrams, examples)
+- Assess clarity and usability for target audience
+- Verify templates are complete with all required sections
+- Check customization guidance is provided
+- Validate examples demonstrate proper template usage
 
-### M. **Architecture Pattern Documentation**
+### M. Prompt Pattern Documentation
 
-- Verify pattern intent and participants are clearly explained
+- Verify pattern intent and structure are clearly explained
 - Check when/when-not-to-use guidance is present
 - Validate trade-offs are discussed
-- Ensure implementation examples are provided in multiple languages where relevant
+- Ensure implementation examples are provided in multiple languages
 
-### N. **Diagram & Visual Quality**
+### N. Diagram and Visual Quality
 
 - Verify ASCII diagrams are provided as fallback
 - Check Mermaid diagrams are well-structured
 - Validate visual clarity and accuracy
-- Ensure diagrams support learning objectives
+- Ensure diagrams support understanding
 
-### O. **Cross-Domain Integration**
+### O. Cross-Language Integration
 
-- Check proper references between domains
-- Verify content connections across levels
-- Validate integration between reference library and LeadArchitect tracks
-- Ensure consistency in terminology and concepts
+- Check proper references between language implementations
+- Verify content consistency across Python, C#, and Postman
+- Validate integration patterns are documented
+- Ensure terminology consistency
 
 ---
 
@@ -147,23 +147,23 @@ Check for presence of:
 
 ### Quality Requirements
 
-- **Accuracy**: Technically correct and architecturally sound
-- **Completeness**: Addresses stated learning objectives fully
+- **Accuracy**: Technically correct and aligned with Azure OpenAI best practices
+- **Completeness**: Addresses stated objectives fully
 - **Clarity**: Clear explanations with practical examples and runnable code
-- **Relevance**: Directly applicable to architecture practice and decision-making
-- **Currency**: Reflects current technologies and best practices
+- **Relevance**: Directly applicable to prompt engineering practice
+- **Currency**: Reflects current Azure OpenAI APIs and best practices
 - **Practicality**: Includes actionable guidance, patterns, and examples
-- **Pedagogy**: Uses appropriate learning techniques for target audience
+- **Security**: Follows security best practices (no hardcoded keys, proper configuration)
 
 ### File Standards
 
 - **Naming**: kebab-case filenames, descriptive names indicating content focus
 - **Structure**: Clear sections, logical flow, easy navigation
-- **Metadata**: Learning level, prerequisites, objectives, topics, estimated time
+- **Metadata**: Pattern type, use case, objectives, examples
 - **References**: Cross-references to related content with working links
-- **Examples**: Runnable code with multiple language implementations where relevant
+- **Examples**: Runnable code with multiple language implementations
 - **Visuals**: ASCII diagrams and Mermaid diagrams where helpful
-- **Length**: Focused, modular content (typically 100-300 lines for reference materials, scalable for complex topics)
+- **Length**: Focused, modular content
 
 ---
 
@@ -191,22 +191,22 @@ For each file:
 ```json
 {
   "file_path": "string",
-  "level_phase_designation": "string (e.g., Level 3 or Phase 02 - Cluster C)",
-  "domain_category": "string (e.g., Development Fundamentals, AI-ML, Leadership & Strategy)",
+  "pattern_type": "string (e.g., instruction-based, role-based, RAG)",
+  "language_category": "string (e.g., python, csharp, postman, documentation)",
   "checks_passed": ["list of check keys, e.g., A,B,C,F,G,I"],
-  "learning_metadata_present": true/false,
+  "metadata_present": true,
   "content_quality_score": "0-100",
   "practical_application_score": "0-100",
   "issues": [
     {
-      "id": "string (unique, e.g., AJ-001)",
+      "id": "string (unique, e.g., PEP-001)",
       "severity": "high|medium|low",
       "line_start": 0,
       "line_end": 0,
       "description": "string",
       "suggested_fix": "string",
       "fix_type": "replace|delete|add|rename|format|link-fix|metadata-add",
-      "violation_type": "string (e.g., missing-objectives, broken-link, outdated-pattern)"
+      "violation_type": "string (e.g., missing-pattern, broken-link, outdated-api)"
     }
   ],
   "overall_status": "compliant|needs_updates|remove",
@@ -244,9 +244,9 @@ For each file:
 ```json
 {
   "files_with_complete_metadata": 0,
-  "files_missing_learning_objectives": 0,
-  "files_missing_prerequisites": 0,
-  "files_missing_core_topics": 0,
+  "files_missing_pattern_type": 0,
+  "files_missing_use_case": 0,
+  "files_missing_examples": 0,
   "files_with_incorrect_naming": 0,
   "metadata_compliance_percentage": "0-100"
 }
@@ -258,9 +258,8 @@ For each file:
 {
   "internal_links_valid": 0,
   "broken_internal_links": 0,
-  "domain_cross_references": 0,
-  "level_cross_references": 0,
-  "phase_cross_references": 0,
+  "pattern_cross_references": 0,
+  "language_cross_references": 0,
   "external_link_validation": "needs_verification"
 }
 ```
@@ -272,33 +271,53 @@ For each file:
   "structural_improvements": ["recommendation1"],
   "content_enhancements": ["recommendation2"],
   "metadata_additions": ["recommendation3"],
-  "domain_reorganization": ["recommendation4"],
+  "code_improvements": ["recommendation4"],
   "pattern_documentation": ["recommendation5"]
 }
 ```
 
-Formatting rules for output:
+---
 
-- Output only JSON (no prose outside JSON) so it can be parsed by automation.
-- JSON must be UTF-8, compact but human-readable (use 2-space indentation).
-- If you include patches, ensure diffs use unified diff format and are properly escaped inside JSON strings.
+## Formatting Rules
 
-Strict privacy & reasoning constraint:
+- Output as JSON (no prose outside JSON blocks)
+- Use 2-space indentation for readability
+- Escape patches in unified diff format
+- UTF-8 encoding only
+- Quote all JSON keys and string values
 
-- Use ReAct-style internal reasoning and actions to determine findings BUT DO NOT OUTPUT ANY CHAIN-OF-THOUGHT, internal logs, or private reasoning. Only provide the JSON structured output described above.
-- If you cannot confirm something (e.g., external API version), mark it "needs_verification" and state what command or URL the operator should run to confirm.
+---
 
-Deliverables:
+## Deliverables
 
-- The complete JSON report as described above.
-- For each suggested_fix that is small (<= 30 lines), include a quick_fix_patch.
-- For larger fixes, include exact instructions and code snippets for maintainers to apply the change.
-- A final top-level "suggested_next_steps" with three clear actions (e.g., run linter, open PR with patches, run link-checker CI).
+1. Complete JSON report following Prompt Engineering Playbook output requirements
+2. Compliance scoring and prompt engineering quality assessment
+3. Pattern and template coverage analysis with gap identification
+4. Cross-reference validation results
+5. Content quality analysis by pattern type and language
+6. Three clear next steps to improve repository and prompt engineering effectiveness
 
-Formatting rules for output:
+---
 
-- Output only JSON (no prose outside JSON) so it can be parsed by automation.
-- JSON must be UTF-8, compact but human-readable (use 2-space indentation).
+## Behavioral Expectations
+
+- **Prompt Engineering Focus**: Prioritize prompt quality, effectiveness, and alignment with Azure OpenAI best practices
+- **Template Quality**: Flag content that doesn't meet prompt engineering excellence standards
+- **Pattern Integrity**: Ensure prompt patterns are well-documented with clear use cases and examples
+- **Practical Relevance**: Verify content provides actionable prompt engineering guidance and integration examples
+- **Cross-Language Integration**: Validate proper examples across Python, C#, and Postman
+- **Code Quality**: Validate examples follow best practices, are runnable, and demonstrate proper Azure OpenAI integration
+- **Governance Compliance**: Ensure governance guidelines are clear and actionable
+- **Template Completeness**: Verify templates include all necessary components (system prompts, user prompts, examples)
+- **Testing Coverage**: Check that evaluation and testing approaches are documented
+- **Documentation Quality**: Ensure all examples are well-documented with setup instructions
+
+---
+
+## Start Now
+
+Open every file in the repository tree, run Prompt Engineering Playbook-specific checks, and produce the structured JSON report following these requirements. Focus on prompt quality, template completeness, code example correctness, and alignment with Azure OpenAI best practices.
+
 - If you include patches, ensure diffs use unified diff format and are properly escaped inside JSON strings.
 
 Strict privacy & reasoning constraint:
