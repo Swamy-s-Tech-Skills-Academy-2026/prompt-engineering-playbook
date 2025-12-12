@@ -38,34 +38,28 @@ Develop C# examples that illustrate Azure OpenAI usage through the Azure OpenAI 
 
 ---
 
-## What I'll provide (how I'll guide you)
+## Repository Contents
 
-For each stage I will give precise, actionable items you can copy & run, plus ready-to-paste files:
+This repository contains:
 
-* Repo layout and rationale (directory tree + file list).
-* `README.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `LICENSE` starter content.
-* `playbook/` skeleton with markdown sections for the Prompt Engineering Playbook Framework.
-* Prompt templates (Markdown) and a small library of canonical prompts (summarize, classify, extract, RAG).
-* Language examples:
-
-  * Python: runnable example using Azure OpenAI SDK or direct REST (config, auth, venv, sample script).
-  * C#: .NET minimal console app sample using Azure OpenAI (NuGet package name, sample Program.cs).
-  * Postman: collection JSON + environment template and instructions for import.
-* GitHub Actions workflows:
-
-  * Lint / format checks for Python and C#.
-  * Unit test runner (pytest / dotnet test).
-  * CI job to validate Postman collection (using Newman).
-* Secrets & configuration guidance: how to store Azure keys as GitHub secrets, environment variable conventions, local `.env` and `.gitignore`.
-* Branch & release strategy: branching model, PR template, issue template, labels.
-* Acceptance criteria templates and how to attach them to tasks (Work Item formatting).
-* A short checklist for Day 1 / Day 2 / Implementation tasks mapped to git branches and PRs.
+* **Playbook Framework**: Complete playbook structure with markdown sections covering patterns, templates, governance, and evaluation.
+* **Prompt Templates**: Reusable prompt templates for common tasks (summarization, classification, extraction, transformation, code generation).
+* **Code Examples**: Working examples in multiple languages:
+  * Python: Azure OpenAI SDK examples with configuration and authentication
+  * C#: .NET SDK examples with proper client initialization and error handling
+  * Postman: REST API collection with environment variables and test cases
+* **CI/CD Workflows**: GitHub Actions workflows for:
+  * Lint and format checks for Python and C#
+  * Unit test execution (pytest / dotnet test)
+  * Postman collection validation (using Newman)
+* **Documentation**: Setup guides, contribution guidelines, and infrastructure guidance
+* **Governance**: Review workflows, storage strategy, safety considerations, and quality guidelines
 
 ---
 
 ## Repository Structure
 
-```
+```text
 prompt-engineering-playbook/
 ├── README.md
 ├── LICENSE
@@ -112,14 +106,14 @@ prompt-engineering-playbook/
 ## Initial Setup — exact steps (copy/paste)
 
 1. Create repo on GitHub (name: `prompt-engineering-playbook`).
-2. Clone locally:
+1. Clone locally:
 
 ```bash
 git clone git@github.com:<your-org>/prompt-engineering-playbook.git
 cd prompt-engineering-playbook
 ```
 
-3. Create default branch & initial commit:
+1. Create default branch & initial commit:
 
 ```bash
 git checkout -b main
@@ -129,7 +123,7 @@ git commit -m "Initial repo skeleton"
 git push -u origin main
 ```
 
-4. Create feature branches for tasks:
+1. Create feature branches for tasks:
 
 ```bash
 git checkout -b task/design-playbook-day1
@@ -140,57 +134,93 @@ git checkout -b task/implement-csharp
 
 ---
 
-## Security and secrets (what to do)
+## Security and Secrets
 
-* Never commit API keys. Use GitHub repository secrets:
+**Important**: Never commit API keys or sensitive credentials to the repository.
 
-  * `AZURE_OPENAI_ENDPOINT`
-  * `AZURE_OPENAI_KEY`
-  * `POSTMAN_API_KEY` (if needed)
-* Local development: use `.env` (added to `.gitignore`) and a small `config.py` / `appsettings.Development.json` that reads env vars.
+### GitHub Secrets
 
----
+For CI/CD pipelines, use GitHub repository secrets:
 
-## CI examples I can produce now
+* `AZURE_OPENAI_ENDPOINT`
+* `AZURE_OPENAI_KEY`
+* `POSTMAN_API_KEY` (if needed)
 
-* `ci-python.yml` — runs `python -m venv`, `pip install -r requirements.txt`, `pytest`, `flake8`.
-* `ci-dotnet.yml` — builds solution, runs `dotnet test`.
-* `validate-postman.yml` — installs `newman`, runs collection against mock/staging endpoint using secrets.
+### Local Development
 
----
+For local development:
 
-## Example content I can generate immediately (pick any or multiple)
-
-I can produce full file content for each of the following in this chat so you can paste into the repo:
-
-1. `README.md` (project overview + quickstart).
-2. `playbook/00-overview.md` and `01-structure-and-toc.md` (TOC for the playbook).
-3. A set of 6–8 canonical prompt templates in Markdown (summarize, extract, classify, RAG, instruction, user+assistant scaffolding).
-4. `src/python/samples/chat_example.py` — runnable script showing chat completion/embeddings (with safe handling of env vars).
-5. `src/csharp/samples/Program.cs` — .NET console sample using Azure OpenAI SDK (NuGet usage, sample code).
-6. Postman collection JSON and environment file.
-7. GitHub Actions YAML files described above.
-8. `CONTRIBUTING.md` + `PULL_REQUEST_TEMPLATE.md` + `ISSUE_TEMPLATE/bug_report.md`.
-9. PR-ready acceptance criteria templates for each of the four tasks in markdown.
+* Use `.env` files (already added to `.gitignore`)
+* Configure environment variables in `config.py` (Python) or `appsettings.Development.json` (C#)
+* Never commit files containing actual credentials
 
 ---
 
-## How I will guide you step-by-step (workflow)
+## CI/CD Workflows
 
-1. You tell me which artifact(s) you want first (e.g., `README.md` + Day1 playbook skeleton + Python sample).
-2. I paste the full file(s) here in the chat. You copy them into your repo and commit.
-3. I provide the exact `git` commands to create branches, make commits, and open PRs.
-4. After you push, I provide review checklists and recommended reviewers and CI checks to add.
-5. We iterate — you paste failing CI logs or questions and I give fixes and updated file versions.
+The repository includes GitHub Actions workflows:
 
-> Note: I cannot run the CI or push to your repo for you. I will provide all the content and commands so you can execute them.
+* **`ci-python.yml`**: Sets up Python environment, installs dependencies, runs tests with pytest, and performs linting with flake8
+* **`ci-dotnet.yml`**: Builds the C# solution and runs unit tests with dotnet test
+* **`validate-postman.yml`**: Validates Postman collections using Newman against configured endpoints
 
 ---
 
-## Example: Small ready snippet (Playbook TOC + README excerpt)
+## Getting Started
 
-If you want immediate content, here is a compact starter for `playbook/01-structure-and-toc.md` and a `README.md` excerpt. Tell me and I’ll output the full files now.
+### Quick Start
+
+1. **Clone the repository**:
+
+   ```bash
+   git clone <repository-url>
+   cd prompt-engineering-playbook
+   ```
+
+2. **Review the playbook**: Start with `playbook/00-overview.md` to understand the framework
+
+3. **Explore examples**: Check out code examples in `src/python/`, `src/csharp/`, and `src/postman/`
+
+4. **Set up your environment**: Follow the setup instructions in each example directory's README
+
+### Key Files
+
+* **Playbook Framework**: `playbook/` - Complete playbook documentation
+* **Code Examples**: `src/` - Working examples in Python, C#, and Postman
+* **Infrastructure**: `infra/azure-guidance.md` - Azure OpenAI setup guide
+* **Contributing**: `CONTRIBUTING.md` - Guidelines for contributing
 
 ---
 
-If you want me to start now, tell me which files you want first (for example: `README.md`, `playbook/01-structure-and-toc.md`, and `src/python/samples/chat_example.py`) and I will generate them fully here, ready to paste into your repository.
+## Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+### Development Process
+
+1. Create a feature branch from `main`
+2. Make your changes following the coding standards
+3. Add tests for new functionality
+4. Ensure all tests pass and CI checks succeed
+5. Submit a pull request with a clear description
+
+### Branch Strategy
+
+* `main` - Stable, production-ready code
+* `feature/*` - New features or enhancements
+* `bugfix/*` - Bug fixes
+* `task/*` - Task-specific branches (e.g., `task/design-playbook-day1`)
+
+---
+
+## Additional Resources
+
+* **Playbook Documentation**: See `playbook/` directory for complete framework documentation
+* **Code Examples**: Working examples available in `src/python/`, `src/csharp/`, and `src/postman/`
+* **Azure Setup**: Follow `infra/azure-guidance.md` for Azure OpenAI resource configuration
+* **Issues**: Report bugs or request features via GitHub Issues
+* **Discussions**: Join discussions about prompt engineering best practices
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
