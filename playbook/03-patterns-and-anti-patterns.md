@@ -154,5 +154,5 @@ prompt without clear structure or formatting
 
 ## Navigation
 
-- **Previous**: [Structure and Table of Contents](01-structure-and-toc.md)
-- **Next**: [Templates](03-templates.md)
+- **Previous**: [Structure and Table of Contents](02-structure-and-toc.md)
+- **Next**: [Templates](04-templates.md)

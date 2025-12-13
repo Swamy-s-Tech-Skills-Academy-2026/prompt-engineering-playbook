@@ -55,11 +55,11 @@ prompt-engineering-playbook/
 │       └── task-prompt.md
 ├── playbook/                              # Core playbook framework
 │   ├── 01-overview.md
-│   ├── 01-structure-and-toc.md
-│   ├── 02-patterns-and-anti-patterns.md
-│   ├── 03-templates.md
-│   ├── 04-governance.md
-│   └── 05-evaluation-and-testing.md
+│   ├── 02-structure-and-toc.md
+│   ├── 03-patterns-and-anti-patterns.md
+│   ├── 04-templates.md
+│   ├── 05-governance.md
+│   └── 06-evaluation-and-testing.md
 ├── src/                                   # Code examples
 │   ├── python/
 │   ├── csharp/
@@ -86,11 +86,11 @@ prompt-engineering-playbook/
 The `playbook/` directory contains the core playbook framework:
 
 - **01-overview.md**: Introduction and getting started
-- **01-structure-and-toc.md**: Playbook organization and table of contents
-- **02-patterns-and-anti-patterns.md**: Prompt patterns and what to avoid
-- **03-templates.md**: Reusable prompt templates
-- **04-governance.md**: Review workflows, storage, quality guidelines
-- **05-evaluation-and-testing.md**: Testing and evaluation methodologies
+- **02-structure-and-toc.md**: Playbook organization and table of contents
+- **03-patterns-and-anti-patterns.md**: Prompt patterns and what to avoid
+- **04-templates.md**: Reusable prompt templates
+- **05-governance.md**: Review workflows, storage, quality guidelines
+- **06-evaluation-and-testing.md**: Testing and evaluation methodologies
 
 ### Source Directory
 
@@ -108,9 +108,9 @@ The `infra/` directory contains infrastructure guidance:
 
 ## 📞 Support & Escalation
 
-**Questions about prompt patterns?** → Check `playbook/02-patterns-and-anti-patterns.md`
+**Questions about prompt patterns?** → Check `playbook/03-patterns-and-anti-patterns.md`
 
-**Need a template?** → Check `playbook/03-templates.md`
+**Need a template?** → Check `playbook/04-templates.md`
 
 **Code examples?** → Check `src/` directory
 
@@ -124,6 +124,6 @@ The `infra/` directory contains infrastructure guidance:
 
 - **Repository**: Check README.md for repository location
 - **Playbook Overview**: `playbook/01-overview.md`
-- **Structure Reference**: `playbook/01-structure-and-toc.md`
+- **Structure Reference**: `playbook/02-structure-and-toc.md`
 - **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
 - **Contributing**: `CONTRIBUTING.md`

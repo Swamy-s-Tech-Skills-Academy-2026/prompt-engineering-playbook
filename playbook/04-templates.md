@@ -100,5 +100,5 @@ Common parameters to customize:
 
 ## Navigation
 
-- **Previous**: [Patterns and Anti-patterns](02-patterns-and-anti-patterns.md)
-- **Next**: [Governance](04-governance.md)
+- **Previous**: [Patterns and Anti-patterns](03-patterns-and-anti-patterns.md)
+- **Next**: [Governance](05-governance.md)

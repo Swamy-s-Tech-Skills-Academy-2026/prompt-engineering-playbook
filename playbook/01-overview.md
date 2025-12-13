@@ -51,6 +51,6 @@ The playbook is organized into the following sections:
 
 ## Next Steps
 
-- [Structure and Table of Contents](01-structure-and-toc.md)
-- [Patterns and Anti-patterns](02-patterns-and-anti-patterns.md)
-- [Templates](03-templates.md)
+- [Structure and Table of Contents](02-structure-and-toc.md)
+- [Patterns and Anti-patterns](03-patterns-and-anti-patterns.md)
+- [Templates](04-templates.md)

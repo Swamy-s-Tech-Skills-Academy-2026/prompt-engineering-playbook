@@ -139,5 +139,5 @@ test_case:
 
 ## Navigation
 
-- **Previous**: [Governance](04-governance.md)
+- **Previous**: [Governance](05-governance.md)
 - **Back to**: [Overview](01-overview.md)
