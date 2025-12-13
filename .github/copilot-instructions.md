@@ -224,9 +224,9 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 ## 🔗 Quick Links
 
 - [Playbook Overview](../playbook/01-overview.md)
-- [Prompt Patterns](../playbook/02-patterns-and-anti-patterns.md)
-- [Templates](../playbook/03-templates.md)
-- [Governance](../playbook/04-governance.md)
+- [Prompt Patterns](../playbook/03-patterns-and-anti-patterns.md)
+- [Templates](../playbook/04-templates.md)
+- [Governance](../playbook/05-governance.md)
 - [Python Examples](../src/python/README.md)
 - [C# Examples](../src/csharp/README.md)
 - [Azure Setup](../infra/azure-guidance.md)
