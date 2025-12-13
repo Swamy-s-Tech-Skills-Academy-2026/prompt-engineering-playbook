@@ -78,11 +78,11 @@ prompt-engineering-playbook/
 │       └── task-prompt.md
 ├── playbook/
 │   ├── 01-overview.md
-│   ├── 01-structure-and-toc.md
-│   ├── 02-patterns-and-anti-patterns.md
-│   ├── 03-templates.md
-│   ├── 04-governance.md
-│   └── 05-evaluation-and-testing.md
+│   ├── 02-structure-and-toc.md
+│   ├── 03-patterns-and-anti-patterns.md
+│   ├── 04-templates.md
+│   ├── 05-governance.md
+│   └── 06-evaluation-and-testing.md
 ├── src/
 │   ├── python/
 │   │   ├── README.md

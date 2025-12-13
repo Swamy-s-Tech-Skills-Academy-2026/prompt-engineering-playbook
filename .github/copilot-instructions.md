@@ -49,11 +49,11 @@ prompt-engineering-playbook/
 │   └── copilot-instructions.md        # THIS FILE
 ├── playbook/                          # Core playbook framework
 │   ├── 01-overview.md                 # Introduction and getting started
-│   ├── 01-structure-and-toc.md        # Table of contents
-│   ├── 02-patterns-and-anti-patterns.md  # Prompt patterns
-│   ├── 03-templates.md                # Reusable templates
-│   ├── 04-governance.md               # Governance guidelines
-│   └── 05-evaluation-and-testing.md   # Testing approaches
+│   ├── 02-structure-and-toc.md        # Table of contents
+│   ├── 03-patterns-and-anti-patterns.md  # Prompt patterns
+│   ├── 04-templates.md                # Reusable templates
+│   ├── 05-governance.md               # Governance guidelines
+│   └── 06-evaluation-and-testing.md   # Testing approaches
 ├── src/                               # Code examples
 │   ├── python/
 │   │   ├── README.md
