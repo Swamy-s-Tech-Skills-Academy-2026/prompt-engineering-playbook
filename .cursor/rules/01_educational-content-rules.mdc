@@ -1,14 +1,40 @@
 # Content Rules (Prompt Engineering Playbook)
 
-**Version**: 1.0  
-**Last Updated**: November 6, 2025  
+**Version**: 1.1  
+**Last Updated**: December 2025  
 **Priority**: MANDATORY - All content creation must follow these rules without exception
+
+---
+
+## 📋 Rule Applicability
+
+**IMPORTANT**: These rules apply differently based on content type:
+
+### Playbook Documentation (`playbook/` directory)
+- ✅ **File naming**: Must follow numbering conventions (01-, 02-, etc., no 00-)
+- ✅ **Line limits**: Recommended ≤150 lines, but flexible for comprehensive documentation
+- ⚠️ **YAML frontmatter**: NOT required (playbook files are documentation, not educational content)
+- ✅ **Zero-copy policy**: Applies (content must be original)
+- ✅ **File references**: Must point to existing files
+
+### Educational Content (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`)
+- ✅ **File naming**: Must follow numbering conventions (01_, 02_, etc., no 00_)
+- ✅ **Line limits**: STRICT ≤150 lines (split, don't trim)
+- ✅ **YAML frontmatter**: REQUIRED (all 5 metadata fields)
+- ✅ **Zero-copy policy**: Applies (content must be transformative)
+- ✅ **File references**: Must point to existing files
+
+### Code Examples (`src/` directory)
+- ✅ **File naming**: Standard naming conventions (no numbering required)
+- ⚠️ **Line limits**: Not applicable (code files can be longer)
+- ⚠️ **YAML frontmatter**: NOT required
+- ✅ **Code quality**: Must follow language-specific best practices
 
 ---
 
 ## 🚫 Zero-Copy Policy (Non-Negotiable)
 
-**CRITICAL**: All educational content must be transformative, not reformative.
+**CRITICAL**: All content (playbook documentation and educational content) must be transformative, not reformative.
 
 ❌ **NEVER** copy text verbatim from books, articles, websites, videos, or third-party materials  
 ❌ **NEVER** mirror a source's outline, section order, headings, or example sequence  
@@ -37,14 +63,22 @@
 
 ## ⏱️ 25-Minute Learning Segments
 
+**APPLICABILITY**: This rule applies to educational content files (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`).
+
+**For Playbook Documentation**: The 150-line limit is a **recommendation**, not a strict requirement. Playbook files may exceed 150 lines if needed for comprehensive documentation.
+
 ✅ **Modular content** designed for focused 25-minute sessions  
 ✅ **Multi-Part Structure**: Complex topics split into Part 1, Part 2, ... Part N  
 ✅ **One-Shot Learning**: Each segment complete and actionable within time limit  
-✅ **Target Length**: 150 lines of content maximum per response
+✅ **Target Length**: 150 lines of content maximum per response (educational content)
 
 ### ⚠️ CRITICAL: Splitting vs. Trimming Policy
 
-**MANDATORY APPROACH**: When content exceeds 150 lines, **ALWAYS SPLIT** into multiple parts. **NEVER TRIM** or condense content.
+**APPLICABILITY**: This rule applies to educational content files (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`).
+
+**For Playbook Documentation**: If playbook files exceed 150 lines, consider splitting for better organization, but it's not mandatory.
+
+**MANDATORY APPROACH** (Educational Content Only): When content exceeds 150 lines, **ALWAYS SPLIT** into multiple parts. **NEVER TRIM** or condense content.
 
 **Why Splitting is Required:**
 - ✅ **Preserves ALL educational content** - No loss of examples, explanations, or concepts
@@ -75,7 +109,15 @@
 
 ## 📋 Required Content Structure
 
-### 5 Required Playbook Metadata Fields
+### 5 Required Metadata Fields (Educational Content Only)
+
+**APPLICABILITY**: These metadata fields are REQUIRED for educational content files in `01_Reference/`, `02_Learning/`, and `03_Interview-Prep/` directories.
+
+**NOT REQUIRED** for:
+- Playbook documentation files (`playbook/` directory)
+- Code examples (`src/` directory)
+- Infrastructure documentation (`infra/` directory)
+- General documentation (`docs/` directory)
 
 Every educational content file MUST include:
 
@@ -416,6 +458,10 @@ Before committing:
 ---
 
 ## 🔍 Comprehensive Content Review Process
+
+**APPLICABILITY**: This review process applies to educational content files (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`).
+
+**For Playbook Documentation**: Review for content quality, accuracy, and consistency, but YAML frontmatter and strict line limits are not required.
 
 **MANDATORY**: All content in `01_Reference/`, `02_Learning/`, and `03_Interview-Prep/` folders must undergo comprehensive review using CoT (Chain-of-Thought), ReAct (Reasoning + Acting), and systematic reasoning.
 

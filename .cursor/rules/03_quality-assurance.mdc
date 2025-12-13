@@ -11,10 +11,16 @@
 
 ### Content Quality (Prompt Engineering Playbook Standards)
 
+**APPLICABILITY**: 
+- **Playbook Documentation** (`playbook/`): Apply zero-copy policy, but YAML frontmatter and strict line limits are not required
+- **Educational Content** (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`): All rules apply strictly
+
 - [ ] **Zero-Copy Policy Verified**: No verbatim text from sources; completely transformed
 - [ ] **Transformative Workflow Applied**: Fresh outline, new examples, original explanations
-- [ ] **25-Minute Segment Compliance**: Content within 150 lines, modular structure
-- [ ] **5 Required Metadata Fields**: learning_level, prerequisites, estimated_time, learning_objectives, related_topics
+- [ ] **25-Minute Segment Compliance**: 
+  - Educational content: Content within 150 lines, modular structure (STRICT)
+  - Playbook documentation: Content within 150 lines recommended, but flexible
+- [ ] **5 Required Metadata Fields** (Educational Content Only): learning_level, prerequisites, estimated_time, learning_objectives, related_topics
 - [ ] **Original Examples**: All code, diagrams, datasets, and exercises are original
 - [ ] **ASCII-First Diagrams**: Diagrams redrawn in ASCII, never embedded copyrighted figures
 - [ ] **Learning Objectives**: Clear, specific, and measurable outcomes
@@ -26,7 +32,8 @@
 ### Technical Quality
 
 - [ ] Character encoding verified (UTF-8, no symbols)
-- [ ] **YAML frontmatter validated**: No placeholder patterns (`$101_`, `$102_`, `$103_`), `enables:` key present, proper structure
+- [ ] **YAML frontmatter validated** (Educational Content Only): No placeholder patterns (`$101_`, `$102_`, `$103_`), `enables:` key present, proper structure
+  - **Note**: Playbook documentation files (`playbook/`) do NOT require YAML frontmatter
 - [ ] **File references validated**: All file references point to existing files (run `.\tools\psscripts\Validate-FileReferences.ps1`)
 - [ ] **No broken references**: All YAML and markdown links resolve correctly
 - [ ] **File naming validated**: **CRITICAL** - Check for `00_` prefix - **NEVER ALLOWED** (applies to ALL files including `docs/`)
