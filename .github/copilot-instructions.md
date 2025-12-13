@@ -190,7 +190,29 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ---
 
-## 📝 Prompt Engineering Best Practices
+## 📝 Local Quality Checks
+
+### Markdown Linting
+
+Run markdownlint to check all markdown files for style and formatting issues:
+
+```bash
+npx markdownlint-cli2 "**/*.md" --config .markdownlint.json
+```
+
+### Link Checking (Lychee via Docker)
+
+Run Lychee via Docker to check for broken links in markdown files:
+
+```bash
+docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"
+```
+
+**Note**: Requires Docker to be installed and running.
+
+---
+
+## �📝 Prompt Engineering Best Practices
 
 ### Prompt Structure
 

@@ -192,6 +192,30 @@ The repository includes GitHub Actions workflows:
 
 ---
 
+## Quality Checks
+
+This repository uses automated tools to ensure documentation quality.
+
+### Markdown Linting
+
+Run markdownlint to check all markdown files for style and formatting issues:
+
+```bash
+npx markdownlint-cli2 "**/*.md" --config .markdownlint.json
+```
+
+### Link Checking (Lychee)
+
+Run Lychee via Docker to check for broken links in markdown files:
+
+```bash
+docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"
+```
+
+**Note**: Requires Docker to be installed and running.
+
+---
+
 ## Contributing
 
 We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
