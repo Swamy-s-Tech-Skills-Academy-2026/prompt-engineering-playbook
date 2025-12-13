@@ -39,8 +39,8 @@
 - [ ] **File naming validated**: **CRITICAL** - Check for `00_` prefix - **NEVER ALLOWED** (applies to ALL files including `docs/`)
   - Run: `Get-ChildItem -Recurse -Filter "*00_*"` to find violations
   - All numbered files must use `01_`, `02_`, etc. - **NO EXCEPTIONS**
-- [ ] Markdownlint passes: `npx markdownlint-cli2 "file.md"`
-- [ ] Lychee link check passes: `docker run --rm -v "${PWD}:/workspace" lycheeverse/lychee "file.md"`
+- [ ] Markdownlint passes: `npx markdownlint-cli2 "**/*.md"` (uses `.markdownlint-cli2.yaml` and `.markdownlint.json` automatically)
+- [ ] Lychee link check passes: `docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"` (requires Docker)
 - [ ] **Numbering consistent**: Uses `01_`, `02_`, etc. - **NEVER `00_`** (applies to ALL files including `docs/`)
 - [ ] Code fences have language specified
 - [ ] Blank lines proper (MD022/031/032)

@@ -192,13 +192,23 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ## 📝 Local Quality Checks
 
+Before committing changes, run these quality checks to ensure documentation meets standards:
+
 ### Markdown Linting
 
 Run markdownlint to check all markdown files for style and formatting issues:
 
 ```bash
-npx markdownlint-cli2 "**/*.md" --config .markdownlint.json
+npx markdownlint-cli2 "**/*.md"
 ```
+
+**Note**: Uses `.markdownlint-cli2.yaml` for configuration. The tool automatically reads `.markdownlint.json` for rule settings.
+
+**Common Issues to Fix:**
+
+- Missing language specification in code fences (MD040)
+- Missing blank lines around headings/lists/fences (MD022/MD031/MD032)
+- Incorrect list indentation (MD007 - use 2 spaces)
 
 ### Link Checking (Lychee via Docker)
 
@@ -208,7 +218,17 @@ Run Lychee via Docker to check for broken links in markdown files:
 docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"
 ```
 
-**Note**: Requires Docker to be installed and running.
+**Note**: Requires Docker to be installed and running. The configuration file `lychee.toml` at the repository root defines excluded patterns and timeout settings.
+
+### Pre-Commit Checklist
+
+Before committing documentation changes:
+
+- [ ] Run markdownlint and fix any issues
+- [ ] Run Lychee link checker (if Docker available)
+- [ ] Verify all file references point to existing files
+- [ ] Check that code fences have language specifications
+- [ ] Ensure proper blank lines around headings and lists
 
 ---
 

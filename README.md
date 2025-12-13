@@ -201,8 +201,10 @@ This repository uses automated tools to ensure documentation quality.
 Run markdownlint to check all markdown files for style and formatting issues:
 
 ```bash
-npx markdownlint-cli2 "**/*.md" --config .markdownlint.json
+npx markdownlint-cli2 "**/*.md"
 ```
+
+**Note**: Uses `.markdownlint-cli2.yaml` for configuration. The tool automatically reads `.markdownlint.json` for rule settings.
 
 ### Link Checking (Lychee)
 
@@ -212,7 +214,7 @@ Run Lychee via Docker to check for broken links in markdown files:
 docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"
 ```
 
-**Note**: Requires Docker to be installed and running.
+**Note**: Requires Docker to be installed and running. The configuration file `lychee.toml` at the repository root defines excluded patterns and timeout settings.
 
 ---
 
