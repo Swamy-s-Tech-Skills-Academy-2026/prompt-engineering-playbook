@@ -50,12 +50,14 @@ newman run prompt-playbook.postman_collection.json -e prompt-playbook.postman_en
 ## Environment Variables
 
 Required variables:
+
 - `azure_openai_endpoint` - Azure OpenAI endpoint URL
 - `azure_openai_key` - API key
 - `azure_openai_deployment` - Deployment name
 - `azure_openai_api_version` - API version
 
 Optional variables:
+
 - `model` - Model name (if different from deployment)
 - `temperature` - Temperature setting
 - `max_tokens` - Maximum tokens

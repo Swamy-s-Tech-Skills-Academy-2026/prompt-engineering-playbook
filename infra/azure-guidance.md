@@ -13,12 +13,14 @@ This document provides guidance for setting up and configuring Azure OpenAI reso
 ### 1. Create Azure OpenAI Resource
 
 Using Azure Portal:
+
 1. Navigate to Azure Portal
 2. Create a new resource
 3. Search for "Azure OpenAI"
 4. Create the resource with appropriate configuration
 
 Using Azure CLI:
+
 ```bash
 az cognitiveservices account create \
   --name your-openai-resource \

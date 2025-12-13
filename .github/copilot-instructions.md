@@ -203,13 +203,13 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ### Common Patterns
 
-| Pattern | Use Case | Example |
-|---------|----------|---------|
-| Instruction-based | Direct task completion | "Summarize the following text..." |
-| Role-based | Specialized expertise | "You are a senior code reviewer..." |
-| Chain-of-thought | Complex reasoning | "Think step by step..." |
-| RAG | Knowledge-grounded | "Based on the following context..." |
-| Evaluation | Quality assessment | "Rate the following on a scale..." |
+| Pattern           | Use Case               | Example                                |
+| ----------------- | ---------------------- | -------------------------------------- |
+| Instruction-based | Direct task completion | "Summarize the following text..."      |
+| Role-based        | Specialized expertise  | "You are a senior code reviewer..."    |
+| Chain-of-thought  | Complex reasoning      | "Think step by step..."                |
+| RAG               | Knowledge-grounded     | "Based on the following context..."    |
+| Evaluation        | Quality assessment     | "Rate the following on a scale..."     |
 
 ### Anti-Patterns to Avoid
 

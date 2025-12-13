@@ -24,6 +24,7 @@ This project adheres to a Code of Conduct that all contributors are expected to 
    git clone git@github.com:YOUR_USERNAME/prompt-engineering-playbook.git
    cd prompt-engineering-playbook
    ```
+
 3. **Set up the development environment**:
    - For Python examples: Create a virtual environment and install dependencies
    - For C# examples: Ensure .NET SDK is installed
@@ -133,9 +134,9 @@ git checkout -b task/implement-csharp
 ## Questions?
 
 If you have questions, please:
+
 - Open an issue for discussion
 - Check existing documentation
 - Contact maintainers
 
 Thank you for contributing to the Prompt Engineering Playbook!
-
