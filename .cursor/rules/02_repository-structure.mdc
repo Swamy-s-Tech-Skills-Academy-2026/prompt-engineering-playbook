@@ -22,11 +22,31 @@
 
 **This repository (`prompt-engineering-playbook`) contains:**
 
-- ✅ **Playbook Documentation**: Core playbook framework and documentation
-- ✅ **Code Examples**: Working examples in Python, C#, and Postman
+- ✅ **Playbook Documentation**: Core playbook framework and documentation (`playbook/` directory)
+- ✅ **Code Examples**: Working examples in Python, C#, and Postman (`src/` directory)
 - ✅ **Templates**: Reusable prompt templates
 - ✅ **Governance**: Review workflows, storage strategy, quality guidelines
 - ✅ **Infrastructure Guidance**: Azure setup and configuration guidance
+
+### 📋 Content Type Classifications
+
+**Playbook Documentation** (`playbook/`):
+- Purpose: Framework documentation and guidelines
+- YAML Frontmatter: NOT required
+- Line Limit: Recommended ≤150 lines, but flexible
+- File Naming: Must use numbering (01-, 02-, etc., no 00-)
+
+**Educational Content** (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`):
+- Purpose: Educational learning materials
+- YAML Frontmatter: REQUIRED (all 5 metadata fields)
+- Line Limit: STRICT ≤150 lines (split, don't trim)
+- File Naming: Must use numbering (01_, 02_, etc., no 00_)
+
+**Code Examples** (`src/`):
+- Purpose: Working code samples
+- YAML Frontmatter: NOT required
+- Line Limit: Not applicable
+- File Naming: Standard naming conventions
 
 ---
 
@@ -76,8 +96,6 @@ prompt-engineering-playbook/
 ```
 
 ---
-
-
 
 ## 📁 Directory Structure Details
 

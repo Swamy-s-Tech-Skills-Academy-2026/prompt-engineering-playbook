@@ -38,6 +38,16 @@ Supported languages: `text`, `mermaid`, `bash`, `powershell`, `json`, `yaml`, `p
 
 ## 🔍 YAML Frontmatter Validation (CRITICAL)
 
+### Applicability
+
+**REQUIRED FOR**: Educational content files in `01_Reference/`, `02_Learning/`, and `03_Interview-Prep/` directories.
+
+**NOT REQUIRED FOR**:
+- Playbook documentation files (`playbook/` directory)
+- Code examples (`src/` directory)
+- Infrastructure documentation (`infra/` directory)
+- General documentation (`docs/` directory)
+
 ### Required Structure
 
 All educational content files MUST have valid YAML frontmatter with proper structure:
