@@ -54,7 +54,7 @@ prompt-engineering-playbook/
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
 ├── playbook/                              # Core playbook framework
-│   ├── 00-overview.md
+│   ├── 01-overview.md
 │   ├── 01-structure-and-toc.md
 │   ├── 02-patterns-and-anti-patterns.md
 │   ├── 03-templates.md
@@ -74,36 +74,10 @@ prompt-engineering-playbook/
 ├── CODE_OF_CONDUCT.md                     # Code of conduct
 └── .gitignore                             # Git ignore rules
 ```
-├── .copilot/                              # Copilot configuration
-├── .cursor/                               # Cursor AI configuration
-├── .github/                               # GitHub configuration
-├── docs/                                  # Documentation hub
-├── src/                                   # Source content (organized)
-│   ├── 01_Reference/                     # Static knowledge base (compliant content)
-│   │   ├── 01_Development/               # Software development fundamentals
-│   │   ├── 02_AI-and-ML/                 # AI/ML knowledge base
-│   │   └── 05_DevOps/                    # DevOps practices and tools
-│   ├── 02_Learning/                       # Progressive learning paths (coming soon)
-│   └── 03_Interview-Prep/                # Interview preparation materials
-│       ├── Common/                       # Shared interview content
-│       ├── TPM/                          # Technical Project Manager prep
-│       ├── Architect/                    # Software Architect prep
-│       ├── Solution-Architect/           # Solution Architect prep
-│       └── Engineering-Manager/          # Engineering Manager prep
-├── source-materials/                      # Staging area (at repository root, git-ignored, non-compliant)
-│   └── [source content before transformation]
-└── tools/                                 # Automation and utilities
-    └── psscripts/                         # PowerShell scripts
-        ├── Get-FileStats.ps1
-        ├── Get-MarkdownSummary.ps1
-        ├── Get-RepoStats.ps1
-        ├── Compare-DocFiles.ps1
-        ├── Find-DuplicateContent.ps1
-        ├── Quick-HealthCheck.ps1
-        └── README.md
-```
 
 ---
+
+
 
 ## 📁 Directory Structure Details
 
@@ -118,9 +92,9 @@ The `playbook/` directory contains the core playbook framework:
 - **04-governance.md**: Review workflows, storage, quality guidelines
 - **05-evaluation-and-testing.md**: Testing and evaluation methodologies
 
-### Examples Directory
+### Source Directory
 
-The `examples/` directory contains working code examples:
+The `src/` directory contains working code examples:
 
 - **python/**: Python examples using Azure OpenAI SDK
 - **csharp/**: C# examples using .NET SDK
@@ -138,7 +112,7 @@ The `infra/` directory contains infrastructure guidance:
 
 **Need a template?** → Check `playbook/03-templates.md`
 
-**Code examples?** → Check `examples/` directory
+**Code examples?** → Check `src/` directory
 
 **Azure setup?** → Check `infra/azure-guidance.md`
 
@@ -149,7 +123,7 @@ The `infra/` directory contains infrastructure guidance:
 ## For More Information
 
 - **Repository**: Check README.md for repository location
-- **Playbook Overview**: `playbook/00-overview.md`
+- **Playbook Overview**: `playbook/01-overview.md`
 - **Structure Reference**: `playbook/01-structure-and-toc.md`
 - **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
 - **Contributing**: `CONTRIBUTING.md`
