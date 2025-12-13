@@ -1,6 +1,6 @@
 # S.M.A.R.T. Prompt Framework for GitHub Copilot Coding Agents
 
-**ArchitectJourney Edition** - Framework for creating high-quality coding agent instructions aligned with architectural excellence standards and progressive learning levels.
+**Prompt Engineering Playbook Edition** - Framework for creating high-quality coding agent instructions aligned with prompt engineering best practices and Azure OpenAI integration patterns.
 
 ---
 
@@ -18,14 +18,14 @@ T - Task-Oriented Constraints (Technology stack, architectural patterns, forbidd
 
 ---
 
-## 🏛️ **ArchitectJourney Alignment**
+## 🏛️ **Prompt Engineering Playbook Alignment**
 
 When creating prompts, consider:
 
-- **Learning Level Context**: Is this for Level 1-3 (foundational), Level 4-6 (enterprise), or Level 7-9 (strategic)?
-- **Domain Integration**: How does this task span across 13 reference domains?
-- **Architectural Patterns**: Which design/architecture patterns should be applied?
-- **Progressive Complexity**: Is the implementation scoped appropriately for the team's level?
+- **Prompt Pattern**: Is this instruction-based, role-based, RAG, chain-of-thought, or evaluation?
+- **Use Case Context**: What task type (summarization, classification, extraction, transformation, code-generation)?
+- **Azure OpenAI Integration**: Which SDK pattern (Python, C#, or REST API via Postman)?
+- **Template Reusability**: Can this prompt be templated for reuse across similar use cases?
 
 ## 🏗️ **Advanced Problem Statement Template**
 
@@ -650,29 +650,29 @@ Before submitting ANY coding agent PR or task completion:
 
 ---
 
-## 🎓 **ArchitectJourney Learning Integration**
+## 🎓 **Prompt Engineering Playbook Integration**
 
-Align your coding agent tasks with the learning progression:
+Align your coding agent tasks with prompt engineering best practices:
 
-### **For Levels 1-3 (Foundation & Patterns):**
+### **For Prompt Pattern Development:**
 
-- Focus on design pattern application
-- SOLID principles demonstration
-- Clean code and testing practices
-- Language-specific idioms and best practices
+- Focus on clear instruction structure and role definition
+- Demonstrate proper system and user message separation
+- Include examples and few-shot learning patterns
+- Show proper error handling and validation
 
-### **For Levels 4-6 (Enterprise & Cloud):**
+### **For Azure OpenAI Integration:**
 
-- Microservices architecture implementation
-- Cloud platform integration (Azure, AWS, GCP)
-- DevOps and CI/CD pipeline design
-- System scalability and resilience patterns
+- Use proper SDK patterns (Python, C#, REST API)
+- Implement retry logic and error handling
+- Include configuration management and secrets handling
+- Demonstrate proper logging and observability
 
-### **For Levels 7-9 (Strategy & AI/ML):**
+### **For Template Creation:**
 
-- AI/ML system architecture
-- Enterprise security and governance
-- Strategic technology decisions
-- Leadership and organizational transformation
+- Create reusable templates with parameterization
+- Document use cases and when to apply each template
+- Include evaluation criteria and testing approaches
+- Provide governance guidelines and review workflows
 
-This framework ensures consistent, high-quality results from GitHub Copilot coding agents while preventing common issues and maintaining enterprise-grade architectural standards aligned with ArchitectJourney learning levels.
+This framework ensures consistent, high-quality results from GitHub Copilot coding agents while preventing common issues and maintaining enterprise-grade prompt engineering standards aligned with Azure OpenAI best practices.

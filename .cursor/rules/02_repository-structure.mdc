@@ -7,47 +7,26 @@
 
 ## 🧭 Repository Context
 
-**ArchitectJourney** is a comprehensive learning and reference repository for aspiring software architects. It provides:
+**Prompt Engineering Playbook** is a comprehensive playbook that standardizes how prompts are designed, developed, tested, and integrated across C#, Python, and Postman workflows using Azure OpenAI. It provides:
 
-- Structured learning roadmap from foundational programming to architectural mastery
-- Reference materials for design patterns, principles, and best practices
-- Practical project examples and implementation guides
-- Leadership and strategic frameworks for technical decision-making
+- Standard prompt patterns (instruction-based, role-based, RAG, chain-of-thought, evaluation)
+- Reusable prompt templates for common tasks
+- Governance guidelines and quality standards
+- Code integration examples in Python, C#, and Postman
 
-**Target Audience**: Developers → Software Architects → Lead Architects → Technology Directors
+**Target Audience**: Engineering teams working with Azure OpenAI, prompt engineers, AI application developers
 
-**Learning Framework**: 9-stage unified progression combining core architecture fundamentals with leadership development
+**Purpose**: Ensures uniformity, reduces model misbehaviour, accelerates onboarding, improves productivity, and provides a consistent framework for enterprise-grade Azure OpenAI development
 
-### 🚨 CRITICAL: Repository Purpose & Code Separation
+### 🚨 CRITICAL: Repository Purpose
 
-**This repository (`ArchitectJourney`) is EXCLUSIVELY for educational content:**
+**This repository (`prompt-engineering-playbook`) contains:**
 
-- ✅ **Educational Content Only**: Markdown documentation, learning materials, concepts, and illustrative code examples
-- ✅ **Minimal Code Examples**: Code snippets in educational content should be minimal, illustrative, and focused on teaching concepts
-- ❌ **NO Full Implementations**: Complete, runnable code projects are NOT stored in this repository
-- ❌ **NO Code Repositories**: This repository does not contain language-specific code implementations
-
-**Code Implementations Location:**
-
-All full code implementations, projects, and runnable examples are stored in **separate GitHub repositories** within the same organization (`SwamysArchitectJourney-2026`):
-
-- `Python` - Python implementations
-- `CSharp` - C# and .NET projects
-- `JavaScript` - JavaScript/TypeScript projects
-- `Java` - Java and Spring Boot
-- `Go` - Go projects
-- `Cloud` - Infrastructure as Code
-- `AI-ML` - AI/ML implementations
-
-**Code Examples in Educational Content:**
-
-When including code examples in educational content:
-
-- ✅ Use minimal, illustrative snippets to demonstrate concepts
-- ✅ Focus on teaching, not complete implementations
-- ✅ Reference full implementations in separate code repositories
-- ❌ Do not include complete, production-ready code
-- ❌ Do not create runnable projects in this repository
+- ✅ **Playbook Documentation**: Core playbook framework and documentation
+- ✅ **Code Examples**: Working examples in Python, C#, and Postman
+- ✅ **Templates**: Reusable prompt templates
+- ✅ **Governance**: Review workflows, storage strategy, quality guidelines
+- ✅ **Infrastructure Guidance**: Azure setup and configuration guidance
 
 ---
 
@@ -56,9 +35,7 @@ When including code examples in educational content:
 ### Current Structure (As of November 24, 2025)
 
 ```text
-ArchitectJourney/
-├── .copilot/                              # Copilot configuration
-│   └── settings.json
+prompt-engineering-playbook/
 ├── .cursor/                               # Cursor AI configuration
 │   └── rules/                             # Project rules (this directory)
 │       ├── 01_educational-content-rules.mdc
@@ -69,26 +46,34 @@ ArchitectJourney/
 │       ├── 06_cross-domain-integration.mdc
 │       └── README.md
 ├── .github/                               # GitHub configuration
+│   ├── workflows/                         # CI/CD workflows
+│   ├── ISSUE_TEMPLATE/                    # Issue templates
+│   ├── PULL_REQUEST_TEMPLATE.md           # PR template
 │   ├── copilot-instructions.md            # GitHub Copilot instructions
 │   └── prompts/                           # Reusable prompt templates
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
-├── docs/                                  # Documentation hub
-│   ├── 01_GitHub-Organization-Strategy.md
-│   ├── 02_Workspace-Review-2025-11-23.md
-│   ├── review-reports/                     # All review reports (migration, content review, etc.)
-│   │   └── [DDMonYYYY.md]                 # Example: 24Nov2025.md (date-based naming)
-│   └── images/                            # Architecture diagrams and assets
-│       └── .gitkeep
+├── playbook/                              # Core playbook framework
+│   ├── 00-overview.md
+│   ├── 01-structure-and-toc.md
+│   ├── 02-patterns-and-anti-patterns.md
+│   ├── 03-templates.md
+│   ├── 04-governance.md
+│   └── 05-evaluation-and-testing.md
+├── src/                                   # Code examples
+│   ├── python/
+│   ├── csharp/
+│   └── postman/
+├── infra/                                 # Infrastructure guidance
+│   └── azure-guidance.md
+├── docs/                                  # Additional documentation
+│   └── architecture-diagrams/
 ├── LICENSE                                 # MIT License
 ├── README.md                               # Main repository documentation
+├── CONTRIBUTING.md                         # Contribution guidelines
+├── CODE_OF_CONDUCT.md                     # Code of conduct
 └── .gitignore                             # Git ignore rules
 ```
-
-### Current Structure (As of November 24, 2025)
-
-```text
-ArchitectJourney/
 ├── .copilot/                              # Copilot configuration
 ├── .cursor/                               # Cursor AI configuration
 ├── .github/                               # GitHub configuration
@@ -120,49 +105,42 @@ ArchitectJourney/
 
 ---
 
-## 📁 Source Materials Staging Area
+## 📁 Directory Structure Details
 
-**Location**: `source-materials/` (at repository root, git-ignored)
+### Playbook Directory
 
-**Purpose**: **Staging folder for migration** - Permanent staging area where source content is placed before review and transformation into ArchitectJourney educational content.
+The `playbook/` directory contains the core playbook framework:
 
-**Critical Workflow**:
+- **00-overview.md**: Introduction and getting started
+- **01-structure-and-toc.md**: Playbook organization and table of contents
+- **02-patterns-and-anti-patterns.md**: Prompt patterns and what to avoid
+- **03-templates.md**: Reusable prompt templates
+- **04-governance.md**: Review workflows, storage, quality guidelines
+- **05-evaluation-and-testing.md**: Testing and evaluation methodologies
 
-1. **Place materials**: User places source materials (transcripts, notes, documents) in `source-materials/` folder (at repository root)
-2. **Review and migrate**: AI assistant reviews ALL files, identifies unique content, and migrates/transforms following Educational Content Rules
-3. **Verify migration**: Confirm all unique content has been migrated to `src/01_Reference/`, `src/02_Learning/`, or `src/03_Interview-Prep/`
-4. **Create verification report**: Generate migration verification report in `docs/review-reports/` with date-based naming (format: `DDMonYYYY.md`, e.g., `24Nov2025.md`)
-5. **Keep source files**: After successful migration, keep source files in `source-materials/` folder - user will delete manually
+### Examples Directory
 
-**Important**:
+The `examples/` directory contains working code examples:
 
-- Files in `source-materials/` are **NOT required to be compliant** - they are raw source materials
-- The `source-materials/` folder itself is **permanent** - it's a staging area for ongoing migrations
-- After migration, **keep source files** in `source-materials/` folder - user will delete manually
+- **python/**: Python examples using Azure OpenAI SDK
+- **csharp/**: C# examples using .NET SDK
+- **postman/**: Postman collections for REST API testing
 
-### Learning Paths Structure
+### Infrastructure Directory
 
-**Important**: `Learning/` folders are created **as needed** when learning content is ready to be added. Empty folders are acceptable and expected.
+The `infra/` directory contains infrastructure guidance:
 
-**Policy**:
-
-- ✅ Create `Learning/` folder structure when you have content ready to add
-- ✅ Empty folders are acceptable - they indicate planned content
-- ✅ Do not create empty folder hierarchies in advance
-- ✅ Add content following Educational Content Rules when ready
-- ✅ Create folders progressively as learning progresses
-
-**Current Status**: `Learning/01_Core-Architecture-Path/` and `Learning/02_Lead-Architect-Path/` exist but are empty, which is acceptable per this policy.
+- **azure-guidance.md**: Azure OpenAI setup and configuration
 
 ## 📞 Support & Escalation
 
-**Questions about content placement?** → Check `docs/02_RepositoryStructure.md`
+**Questions about prompt patterns?** → Check `playbook/02-patterns-and-anti-patterns.md`
 
-**Content too long?** → Create multi-part structure (Part 1, Part 2, Part N)
+**Need a template?** → Check `playbook/03-templates.md`
 
-**Encoding issues?** → Search for, replace with Unicode equivalents
+**Code examples?** → Check `examples/` directory
 
-**Link broken?** → Update URLs or fix internal file references
+**Azure setup?** → Check `infra/azure-guidance.md`
 
 **Structure outdated?** → Update `.github/copilot-instructions.md` and `README.md` immediately
 
@@ -170,8 +148,8 @@ ArchitectJourney/
 
 ## For More Information
 
-- **Repository**: <https://github.com/Swamy-s-Tech-Skills-Academy/ArchitectJourney>
-- **Master Roadmap**: `docs/01_UnifiedArchitectMasteryRoadmap.md`
-- **Structure Reference**: `docs/02_RepositoryStructure.md`
+- **Repository**: Check README.md for repository location
+- **Playbook Overview**: `playbook/00-overview.md`
+- **Structure Reference**: `playbook/01-structure-and-toc.md`
 - **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
-- **Automation Scripts**: `tools/psscripts/README.md`
+- **Contributing**: `CONTRIBUTING.md`

@@ -1,0 +1,258 @@
+{
+  "info": {
+    "name": "Prompt Engineering Playbook - Azure OpenAI",
+    "_postman_id": "prompt-playbook-collection",
+    "description": "Collection of Azure OpenAI API requests demonstrating prompt engineering patterns.\n\nThis collection includes examples for:\n- Chat Completions\n- Embeddings\n- Various prompt patterns (instruction-based, role-based, RAG, etc.)\n\n**Setup:**\n1. Import this collection and the environment file\n2. Configure environment variables with your Azure OpenAI credentials\n3. Run requests to test different prompt patterns",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Chat Completions",
+      "item": [
+        {
+          "name": "Simple Chat Completion",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{AZURE_OPENAI_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a helpful AI assistant specializing in prompt engineering.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"What are the key principles of prompt engineering?\"\n    }\n  ],\n  \"temperature\": 0.7,\n  \"max_tokens\": 1000\n}"
+            },
+            "url": {
+              "raw": "{{AZURE_OPENAI_ENDPOINT}}/openai/deployments/{{AZURE_OPENAI_DEPLOYMENT_NAME}}/chat/completions?api-version={{AZURE_OPENAI_API_VERSION}}",
+              "host": ["{{AZURE_OPENAI_ENDPOINT}}"],
+              "path": ["openai", "deployments", "{{AZURE_OPENAI_DEPLOYMENT_NAME}}", "chat", "completions"],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "{{AZURE_OPENAI_API_VERSION}}"
+                }
+              ]
+            },
+            "description": "Basic chat completion request demonstrating instruction-based prompting."
+          },
+          "response": []
+        },
+        {
+          "name": "Summarization (Instruction Pattern)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{AZURE_OPENAI_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a skilled summarizer. Create a concise summary of the provided text in 3 sentences or fewer. Focus on the key points and main ideas.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Please summarize the following text:\\n\\nPrompt engineering is the practice of designing and refining input prompts to effectively communicate with AI language models. It involves understanding how models interpret instructions, structuring prompts for clarity, and iterating based on outputs. Good prompt engineering can significantly improve the quality, relevance, and accuracy of AI-generated responses. Key techniques include providing context, specifying output formats, using examples (few-shot learning), and applying chain-of-thought reasoning for complex tasks.\"\n    }\n  ],\n  \"temperature\": 0.3,\n  \"max_tokens\": 500\n}"
+            },
+            "url": {
+              "raw": "{{AZURE_OPENAI_ENDPOINT}}/openai/deployments/{{AZURE_OPENAI_DEPLOYMENT_NAME}}/chat/completions?api-version={{AZURE_OPENAI_API_VERSION}}",
+              "host": ["{{AZURE_OPENAI_ENDPOINT}}"],
+              "path": ["openai", "deployments", "{{AZURE_OPENAI_DEPLOYMENT_NAME}}", "chat", "completions"],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "{{AZURE_OPENAI_API_VERSION}}"
+                }
+              ]
+            },
+            "description": "Text summarization using instruction-based prompt pattern."
+          },
+          "response": []
+        },
+        {
+          "name": "Classification (Role Pattern)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{AZURE_OPENAI_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a text classifier. Classify the given text into exactly one of these categories: Technical, Business, Creative, Support. Respond with only the category name, nothing else.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Classify this text:\\n\\nHow do I configure Azure OpenAI endpoints in my application?\"\n    }\n  ],\n  \"temperature\": 0,\n  \"max_tokens\": 50\n}"
+            },
+            "url": {
+              "raw": "{{AZURE_OPENAI_ENDPOINT}}/openai/deployments/{{AZURE_OPENAI_DEPLOYMENT_NAME}}/chat/completions?api-version={{AZURE_OPENAI_API_VERSION}}",
+              "host": ["{{AZURE_OPENAI_ENDPOINT}}"],
+              "path": ["openai", "deployments", "{{AZURE_OPENAI_DEPLOYMENT_NAME}}", "chat", "completions"],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "{{AZURE_OPENAI_API_VERSION}}"
+                }
+              ]
+            },
+            "description": "Text classification using role-based prompt pattern with temperature=0 for deterministic output."
+          },
+          "response": []
+        },
+        {
+          "name": "Chain-of-Thought Reasoning",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{AZURE_OPENAI_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a logical problem solver. When solving problems, think step by step and show your reasoning process before providing the final answer.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"A company has 150 employees. 60% work in the office, and the rest work remotely. Of the remote workers, 25% are in different time zones. How many employees are remote workers in different time zones? Think step by step.\"\n    }\n  ],\n  \"temperature\": 0.2,\n  \"max_tokens\": 1000\n}"
+            },
+            "url": {
+              "raw": "{{AZURE_OPENAI_ENDPOINT}}/openai/deployments/{{AZURE_OPENAI_DEPLOYMENT_NAME}}/chat/completions?api-version={{AZURE_OPENAI_API_VERSION}}",
+              "host": ["{{AZURE_OPENAI_ENDPOINT}}"],
+              "path": ["openai", "deployments", "{{AZURE_OPENAI_DEPLOYMENT_NAME}}", "chat", "completions"],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "{{AZURE_OPENAI_API_VERSION}}"
+                }
+              ]
+            },
+            "description": "Chain-of-thought prompting for complex reasoning tasks."
+          },
+          "response": []
+        }
+      ],
+      "description": "Chat completion examples demonstrating various prompt patterns."
+    },
+    {
+      "name": "Embeddings",
+      "item": [
+        {
+          "name": "Generate Embedding",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{AZURE_OPENAI_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": \"Prompt engineering is the practice of designing effective prompts for AI models.\"\n}"
+            },
+            "url": {
+              "raw": "{{AZURE_OPENAI_ENDPOINT}}/openai/deployments/{{AZURE_OPENAI_EMBEDDING_DEPLOYMENT}}/embeddings?api-version={{AZURE_OPENAI_API_VERSION}}",
+              "host": ["{{AZURE_OPENAI_ENDPOINT}}"],
+              "path": ["openai", "deployments", "{{AZURE_OPENAI_EMBEDDING_DEPLOYMENT}}", "embeddings"],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "{{AZURE_OPENAI_API_VERSION}}"
+                }
+              ]
+            },
+            "description": "Generate an embedding vector for text. Useful for semantic search and RAG applications."
+          },
+          "response": []
+        },
+        {
+          "name": "Generate Batch Embeddings",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "api-key",
+                "value": "{{AZURE_OPENAI_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"input\": [\n    \"Prompt engineering involves designing effective prompts for AI models.\",\n    \"Azure OpenAI provides enterprise-grade AI services in the cloud.\",\n    \"RAG combines retrieval systems with generative AI for accurate responses.\"\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{AZURE_OPENAI_ENDPOINT}}/openai/deployments/{{AZURE_OPENAI_EMBEDDING_DEPLOYMENT}}/embeddings?api-version={{AZURE_OPENAI_API_VERSION}}",
+              "host": ["{{AZURE_OPENAI_ENDPOINT}}"],
+              "path": ["openai", "deployments", "{{AZURE_OPENAI_EMBEDDING_DEPLOYMENT}}", "embeddings"],
+              "query": [
+                {
+                  "key": "api-version",
+                  "value": "{{AZURE_OPENAI_API_VERSION}}"
+                }
+              ]
+            },
+            "description": "Generate embeddings for multiple texts in a single API call."
+          },
+          "response": []
+        }
+      ],
+      "description": "Embedding generation examples for semantic search and RAG applications."
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Validate required environment variables",
+          "const requiredVars = ['AZURE_OPENAI_ENDPOINT', 'AZURE_OPENAI_KEY', 'AZURE_OPENAI_DEPLOYMENT_NAME'];",
+          "",
+          "requiredVars.forEach(varName => {",
+          "    if (!pm.environment.get(varName)) {",
+          "        console.warn(`Warning: ${varName} is not set in environment`);",
+          "    }",
+          "});"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Common test assertions",
+          "pm.test('Status code is 200', function () {",
+          "    pm.response.to.have.status(200);",
+          "});",
+          "",
+          "pm.test('Response has valid JSON', function () {",
+          "    pm.response.to.be.json;",
+          "});",
+          "",
+          "pm.test('Response time is acceptable', function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(30000);",
+          "});"
+        ]
+      }
+    }
+  ]
+}
