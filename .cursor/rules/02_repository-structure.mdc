@@ -111,7 +111,7 @@ prompt-engineering-playbook/
 
 The `playbook/` directory contains the core playbook framework:
 
-- **00-overview.md**: Introduction and getting started
+- **01-overview.md**: Introduction and getting started
 - **01-structure-and-toc.md**: Playbook organization and table of contents
 - **02-patterns-and-anti-patterns.md**: Prompt patterns and what to avoid
 - **03-templates.md**: Reusable prompt templates

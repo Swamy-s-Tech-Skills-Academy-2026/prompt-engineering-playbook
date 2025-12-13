@@ -7,7 +7,7 @@ The Prompt Engineering Playbook is organized into logical sections that build up
 ## Table of Contents
 
 ### 1. Overview
-- [00-overview.md](00-overview.md) - Introduction and getting started
+- [01-overview.md](01-overview.md) - Introduction and getting started
 
 ### 2. Structure and Organization
 - [01-structure-and-toc.md](01-structure-and-toc.md) - This document
@@ -60,5 +60,5 @@ Additional documentation and architecture diagrams are available in:
 
 ## Navigation
 
-- **Previous**: [Overview](00-overview.md)
+- **Previous**: [Overview](01-overview.md)
 - **Next**: [Patterns and Anti-patterns](02-patterns-and-anti-patterns.md)

@@ -77,7 +77,7 @@ prompt-engineering-playbook/
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
 ├── playbook/
-│   ├── 00-overview.md
+│   ├── 01-overview.md
 │   ├── 01-structure-and-toc.md
 │   ├── 02-patterns-and-anti-patterns.md
 │   ├── 03-templates.md
@@ -177,7 +177,7 @@ The repository includes GitHub Actions workflows:
    cd prompt-engineering-playbook
    ```
 
-2. **Review the playbook**: Start with `playbook/00-overview.md` to understand the framework
+2. **Review the playbook**: Start with `playbook/01-overview.md` to understand the framework
 
 3. **Explore examples**: Check out code examples in `src/python/`, `src/csharp/`, and `src/postman/`
 
