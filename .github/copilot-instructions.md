@@ -48,7 +48,7 @@ prompt-engineering-playbook/
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── copilot-instructions.md        # THIS FILE
 ├── playbook/                          # Core playbook framework
-│   ├── 00-overview.md                 # Introduction and getting started
+│   ├── 01-overview.md                 # Introduction and getting started
 │   ├── 01-structure-and-toc.md        # Table of contents
 │   ├── 02-patterns-and-anti-patterns.md  # Prompt patterns
 │   ├── 03-templates.md                # Reusable templates
@@ -223,7 +223,7 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ## 🔗 Quick Links
 
-- [Playbook Overview](../playbook/00-overview.md)
+- [Playbook Overview](../playbook/01-overview.md)
 - [Prompt Patterns](../playbook/02-patterns-and-anti-patterns.md)
 - [Templates](../playbook/03-templates.md)
 - [Governance](../playbook/04-governance.md)
