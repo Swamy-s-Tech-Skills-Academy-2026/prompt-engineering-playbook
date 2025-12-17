@@ -22,11 +22,31 @@
 
 **This repository (`prompt-engineering-playbook`) contains:**
 
-- ✅ **Playbook Documentation**: Core playbook framework and documentation
-- ✅ **Code Examples**: Working examples in Python, C#, and Postman
+- ✅ **Playbook Documentation**: Core playbook framework and documentation (`playbook/` directory)
+- ✅ **Code Examples**: Working examples in Python, C#, and Postman (`src/` directory)
 - ✅ **Templates**: Reusable prompt templates
 - ✅ **Governance**: Review workflows, storage strategy, quality guidelines
 - ✅ **Infrastructure Guidance**: Azure setup and configuration guidance
+
+### 📋 Content Type Classifications
+
+**Playbook Documentation** (`playbook/`):
+- Purpose: Framework documentation and guidelines
+- YAML Frontmatter: NOT required
+- Line Limit: Recommended ≤150 lines, but flexible
+- File Naming: Must use numbering (01-, 02-, etc., no 00-)
+
+**Educational Content** (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`):
+- Purpose: Educational learning materials
+- YAML Frontmatter: REQUIRED (all 5 metadata fields)
+- Line Limit: STRICT ≤150 lines (split, don't trim)
+- File Naming: Must use numbering (01_, 02_, etc., no 00_)
+
+**Code Examples** (`src/`):
+- Purpose: Working code samples
+- YAML Frontmatter: NOT required
+- Line Limit: Not applicable
+- File Naming: Standard naming conventions
 
 ---
 
@@ -54,12 +74,12 @@ prompt-engineering-playbook/
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
 ├── playbook/                              # Core playbook framework
-│   ├── 00-overview.md
-│   ├── 01-structure-and-toc.md
-│   ├── 02-patterns-and-anti-patterns.md
-│   ├── 03-templates.md
-│   ├── 04-governance.md
-│   └── 05-evaluation-and-testing.md
+│   ├── 01-overview.md
+│   ├── 02-structure-and-toc.md
+│   ├── 03-patterns-and-anti-patterns.md
+│   ├── 04-templates.md
+│   ├── 05-governance.md
+│   └── 06-evaluation-and-testing.md
 ├── src/                                   # Code examples
 │   ├── python/
 │   ├── csharp/
@@ -74,36 +94,6 @@ prompt-engineering-playbook/
 ├── CODE_OF_CONDUCT.md                     # Code of conduct
 └── .gitignore                             # Git ignore rules
 ```
-├── .copilot/                              # Copilot configuration
-├── .cursor/                               # Cursor AI configuration
-├── .github/                               # GitHub configuration
-├── docs/                                  # Documentation hub
-├── src/                                   # Source content (organized)
-│   ├── 01_Reference/                     # Static knowledge base (compliant content)
-│   │   ├── 01_Development/               # Software development fundamentals
-│   │   ├── 02_AI-and-ML/                 # AI/ML knowledge base
-│   │   └── 05_DevOps/                    # DevOps practices and tools
-│   ├── 02_Learning/                       # Progressive learning paths (coming soon)
-│   └── 03_Interview-Prep/                # Interview preparation materials
-│       ├── Common/                       # Shared interview content
-│       ├── TPM/                          # Technical Project Manager prep
-│       ├── Architect/                    # Software Architect prep
-│       ├── Solution-Architect/           # Solution Architect prep
-│       └── Engineering-Manager/          # Engineering Manager prep
-├── source-materials/                      # Staging area (at repository root, git-ignored, non-compliant)
-│   └── [source content before transformation]
-└── tools/                                 # Automation and utilities
-    └── psscripts/                         # PowerShell scripts
-        ├── Get-FileStats.ps1
-        ├── Get-MarkdownSummary.ps1
-        ├── Get-RepoStats.ps1
-        ├── Compare-DocFiles.ps1
-        ├── Find-DuplicateContent.ps1
-        ├── Quick-HealthCheck.ps1
-        └── README.md
-```
-
----
 
 ## 📁 Directory Structure Details
 
@@ -111,16 +101,16 @@ prompt-engineering-playbook/
 
 The `playbook/` directory contains the core playbook framework:
 
-- **00-overview.md**: Introduction and getting started
-- **01-structure-and-toc.md**: Playbook organization and table of contents
-- **02-patterns-and-anti-patterns.md**: Prompt patterns and what to avoid
-- **03-templates.md**: Reusable prompt templates
-- **04-governance.md**: Review workflows, storage, quality guidelines
-- **05-evaluation-and-testing.md**: Testing and evaluation methodologies
+- **01-overview.md**: Introduction and getting started
+- **02-structure-and-toc.md**: Playbook organization and table of contents
+- **03-patterns-and-anti-patterns.md**: Prompt patterns and what to avoid
+- **04-templates.md**: Reusable prompt templates
+- **05-governance.md**: Review workflows, storage, quality guidelines
+- **06-evaluation-and-testing.md**: Testing and evaluation methodologies
 
-### Examples Directory
+### Source Directory
 
-The `examples/` directory contains working code examples:
+The `src/` directory contains working code examples:
 
 - **python/**: Python examples using Azure OpenAI SDK
 - **csharp/**: C# examples using .NET SDK
@@ -134,11 +124,11 @@ The `infra/` directory contains infrastructure guidance:
 
 ## 📞 Support & Escalation
 
-**Questions about prompt patterns?** → Check `playbook/02-patterns-and-anti-patterns.md`
+**Questions about prompt patterns?** → Check `playbook/03-patterns-and-anti-patterns.md`
 
-**Need a template?** → Check `playbook/03-templates.md`
+**Need a template?** → Check `playbook/04-templates.md`
 
-**Code examples?** → Check `examples/` directory
+**Code examples?** → Check `src/` directory
 
 **Azure setup?** → Check `infra/azure-guidance.md`
 
@@ -149,7 +139,7 @@ The `infra/` directory contains infrastructure guidance:
 ## For More Information
 
 - **Repository**: Check README.md for repository location
-- **Playbook Overview**: `playbook/00-overview.md`
-- **Structure Reference**: `playbook/01-structure-and-toc.md`
+- **Playbook Overview**: `playbook/01-overview.md`
+- **Structure Reference**: `playbook/02-structure-and-toc.md`
 - **GitHub Copilot Instructions**: `.github/copilot-instructions.md`
 - **Contributing**: `CONTRIBUTING.md`

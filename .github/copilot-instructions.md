@@ -48,12 +48,12 @@ prompt-engineering-playbook/
 │   ├── PULL_REQUEST_TEMPLATE.md
 │   └── copilot-instructions.md        # THIS FILE
 ├── playbook/                          # Core playbook framework
-│   ├── 00-overview.md                 # Introduction and getting started
-│   ├── 01-structure-and-toc.md        # Table of contents
-│   ├── 02-patterns-and-anti-patterns.md  # Prompt patterns
-│   ├── 03-templates.md                # Reusable templates
-│   ├── 04-governance.md               # Governance guidelines
-│   └── 05-evaluation-and-testing.md   # Testing approaches
+│   ├── 01-overview.md                 # Introduction and getting started
+│   ├── 02-structure-and-toc.md        # Table of contents
+│   ├── 03-patterns-and-anti-patterns.md  # Prompt patterns
+│   ├── 04-templates.md                # Reusable templates
+│   ├── 05-governance.md               # Governance guidelines
+│   └── 06-evaluation-and-testing.md   # Testing approaches
 ├── src/                               # Code examples
 │   ├── python/
 │   │   ├── README.md
@@ -190,7 +190,49 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ---
 
-## 📝 Prompt Engineering Best Practices
+## 📝 Local Quality Checks
+
+Before committing changes, run these quality checks to ensure documentation meets standards:
+
+### Markdown Linting
+
+Run markdownlint to check all markdown files for style and formatting issues:
+
+```bash
+npx markdownlint-cli2 "**/*.md"
+```
+
+**Note**: Uses `.markdownlint-cli2.yaml` for configuration. The tool automatically reads `.markdownlint.json` for rule settings.
+
+**Common Issues to Fix:**
+
+- Missing language specification in code fences (MD040)
+- Missing blank lines around headings/lists/fences (MD022/MD031/MD032)
+- Incorrect list indentation (MD007 - use 2 spaces)
+
+### Link Checking (Lychee via Docker)
+
+Run Lychee via Docker to check for broken links in markdown files:
+
+```bash
+docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"
+```
+
+**Note**: Requires Docker to be installed and running. The configuration file `lychee.toml` at the repository root defines excluded patterns and timeout settings.
+
+### Pre-Commit Checklist
+
+Before committing documentation changes:
+
+- [ ] Run markdownlint and fix any issues
+- [ ] Run Lychee link checker (if Docker available)
+- [ ] Verify all file references point to existing files
+- [ ] Check that code fences have language specifications
+- [ ] Ensure proper blank lines around headings and lists
+
+---
+
+## �📝 Prompt Engineering Best Practices
 
 ### Prompt Structure
 
@@ -203,13 +245,13 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ### Common Patterns
 
-| Pattern | Use Case | Example |
-|---------|----------|---------|
-| Instruction-based | Direct task completion | "Summarize the following text..." |
-| Role-based | Specialized expertise | "You are a senior code reviewer..." |
-| Chain-of-thought | Complex reasoning | "Think step by step..." |
-| RAG | Knowledge-grounded | "Based on the following context..." |
-| Evaluation | Quality assessment | "Rate the following on a scale..." |
+| Pattern           | Use Case               | Example                                |
+| ----------------- | ---------------------- | -------------------------------------- |
+| Instruction-based | Direct task completion | "Summarize the following text..."      |
+| Role-based        | Specialized expertise  | "You are a senior code reviewer..."    |
+| Chain-of-thought  | Complex reasoning      | "Think step by step..."                |
+| RAG               | Knowledge-grounded     | "Based on the following context..."    |
+| Evaluation        | Quality assessment     | "Rate the following on a scale..."     |
 
 ### Anti-Patterns to Avoid
 
@@ -223,10 +265,10 @@ AZURE_OPENAI_API_VERSION=2024-02-15-preview
 
 ## 🔗 Quick Links
 
-- [Playbook Overview](../playbook/00-overview.md)
-- [Prompt Patterns](../playbook/02-patterns-and-anti-patterns.md)
-- [Templates](../playbook/03-templates.md)
-- [Governance](../playbook/04-governance.md)
+- [Playbook Overview](../playbook/01-overview.md)
+- [Prompt Patterns](../playbook/03-patterns-and-anti-patterns.md)
+- [Templates](../playbook/04-templates.md)
+- [Governance](../playbook/05-governance.md)
 - [Python Examples](../src/python/README.md)
 - [C# Examples](../src/csharp/README.md)
 - [Azure Setup](../infra/azure-guidance.md)

@@ -37,7 +37,7 @@ Prompts should be reviewed for:
 
 ### Storage Structure
 
-```
+```text
 prompts/
 ├── patterns/
 │   ├── instruction-based/
@@ -116,11 +116,12 @@ prompts/
 - Use kebab-case for file names
 
 **Examples:**
+
 - `summarization-text-template.md`
 - `classification-sentiment-analysis.md`
 - `extraction-entity-recognition.md`
 
 ## Navigation
 
-- **Previous**: [Templates](03-templates.md)
-- **Next**: [Evaluation and Testing](05-evaluation-and-testing.md)
+- **Previous**: [Templates](04-templates.md)
+- **Next**: [Evaluation and Testing](06-evaluation-and-testing.md)

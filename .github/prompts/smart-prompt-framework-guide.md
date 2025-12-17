@@ -535,7 +535,7 @@ Before marking this PR ready for review:
 
 **CRITICAL**: Do not mark this PR as ready for review until ALL build and test validations pass successfully.
 
-```
+```text
 
 ## 🚀 **TraceMind-Specific S.M.A.R.T. Example**
 

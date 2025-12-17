@@ -7,13 +7,16 @@ The Prompt Engineering Playbook is organized into logical sections that build up
 ## Table of Contents
 
 ### 1. Overview
-- [00-overview.md](00-overview.md) - Introduction and getting started
+
+- [01-overview.md](01-overview.md) - Introduction and getting started
 
 ### 2. Structure and Organization
-- [01-structure-and-toc.md](01-structure-and-toc.md) - This document
+
+- [02-structure-and-toc.md](02-structure-and-toc.md) - This document
 
 ### 3. Patterns and Anti-patterns
-- [02-patterns-and-anti-patterns.md](02-patterns-and-anti-patterns.md)
+
+- [03-patterns-and-anti-patterns.md](03-patterns-and-anti-patterns.md)
   - Instruction-based prompts
   - Role-based prompts
   - RAG (Retrieval-Augmented Generation) patterns
@@ -22,7 +25,8 @@ The Prompt Engineering Playbook is organized into logical sections that build up
   - Common anti-patterns to avoid
 
 ### 4. Templates
-- [03-templates.md](03-templates.md)
+
+- [04-templates.md](04-templates.md)
   - Summarization templates
   - Classification templates
   - Extraction templates
@@ -30,7 +34,8 @@ The Prompt Engineering Playbook is organized into logical sections that build up
   - Code-generation templates
 
 ### 5. Governance
-- [04-governance.md](04-governance.md)
+
+- [05-governance.md](05-governance.md)
   - Review workflows
   - Storage strategy
   - Safety considerations
@@ -38,7 +43,8 @@ The Prompt Engineering Playbook is organized into logical sections that build up
   - Versioning approach
 
 ### 6. Evaluation and Testing
-- [05-evaluation-and-testing.md](05-evaluation-and-testing.md)
+
+- [06-evaluation-and-testing.md](06-evaluation-and-testing.md)
   - Testing methodologies
   - Evaluation metrics
   - Quality assurance processes
@@ -60,5 +66,5 @@ Additional documentation and architecture diagrams are available in:
 
 ## Navigation
 
-- **Previous**: [Overview](00-overview.md)
-- **Next**: [Patterns and Anti-patterns](02-patterns-and-anti-patterns.md)
+- **Previous**: [Overview](01-overview.md)
+- **Next**: [Patterns and Anti-patterns](03-patterns-and-anti-patterns.md)

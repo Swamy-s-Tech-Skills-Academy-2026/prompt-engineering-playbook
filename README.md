@@ -77,12 +77,12 @@ prompt-engineering-playbook/
 │       ├── smart-prompt-framework-guide.md
 │       └── task-prompt.md
 ├── playbook/
-│   ├── 00-overview.md
-│   ├── 01-structure-and-toc.md
-│   ├── 02-patterns-and-anti-patterns.md
-│   ├── 03-templates.md
-│   ├── 04-governance.md
-│   └── 05-evaluation-and-testing.md
+│   ├── 01-overview.md
+│   ├── 02-structure-and-toc.md
+│   ├── 03-patterns-and-anti-patterns.md
+│   ├── 04-templates.md
+│   ├── 05-governance.md
+│   └── 06-evaluation-and-testing.md
 ├── src/
 │   ├── python/
 │   │   ├── README.md
@@ -177,7 +177,7 @@ The repository includes GitHub Actions workflows:
    cd prompt-engineering-playbook
    ```
 
-2. **Review the playbook**: Start with `playbook/00-overview.md` to understand the framework
+2. **Review the playbook**: Start with `playbook/01-overview.md` to understand the framework
 
 3. **Explore examples**: Check out code examples in `src/python/`, `src/csharp/`, and `src/postman/`
 
@@ -189,6 +189,32 @@ The repository includes GitHub Actions workflows:
 * **Code Examples**: `src/` - Working examples in Python, C#, and Postman
 * **Infrastructure**: `infra/azure-guidance.md` - Azure OpenAI setup guide
 * **Contributing**: `CONTRIBUTING.md` - Guidelines for contributing
+
+---
+
+## Quality Checks
+
+This repository uses automated tools to ensure documentation quality.
+
+### Markdown Linting
+
+Run markdownlint to check all markdown files for style and formatting issues:
+
+```bash
+npx markdownlint-cli2 "**/*.md"
+```
+
+**Note**: Uses `.markdownlint-cli2.yaml` for configuration. The tool automatically reads `.markdownlint.json` for rule settings.
+
+### Link Checking (Lychee)
+
+Run Lychee via Docker to check for broken links in markdown files:
+
+```bash
+docker run --rm -v "${PWD}:/input:ro" lycheeverse/lychee --config /input/lychee.toml "/input/**/*.md"
+```
+
+**Note**: Requires Docker to be installed and running. The configuration file `lychee.toml` at the repository root defines excluded patterns and timeout settings.
 
 ---
 

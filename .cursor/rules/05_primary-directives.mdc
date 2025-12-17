@@ -9,9 +9,13 @@
 
 ### 1. Prompt Engineering Playbook Content Rules (MANDATORY)
 
-**All content creation must follow these rules without exception.**
+**All content creation must follow these rules, with applicability based on content type:**
 
-See: `01_educational-content-rules.mdc` for complete details.
+- **Playbook Documentation** (`playbook/`): File naming, zero-copy policy, file references (YAML frontmatter and strict line limits NOT required)
+- **Educational Content** (`01_Reference/`, `02_Learning/`, `03_Interview-Prep/`): All rules apply strictly
+- **Code Examples** (`src/`): Code quality standards apply, YAML frontmatter and line limits NOT required
+
+See: `01_educational-content-rules.mdc` for complete details and applicability.
 
 ### 2. Automation-First Approach
 
